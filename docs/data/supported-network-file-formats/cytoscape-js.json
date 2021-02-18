@@ -1,0 +1,180 @@
+{
+  "elements" : {
+    "nodes" : [ {
+      "data" : {
+        "id" : "723",
+        "selected" : false,
+        "annotation_Taxon" : "Saccharomyces cerevisiae",
+        "alias" : [ "RPL31A", "RPL34", "S000002233", "ribosomal protein L31A (L34A) (YL28)" ],
+        "shared_name" : "YDL075W",
+        "SUID" : 723,
+        "degree_layout" : 1,
+        "name" : "YDL075W"
+      },
+      "position" : {
+        "x" : 693.0518315633137,
+        "y" : -49.47506554921466
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "726",
+        "selected" : false,
+        "annotation_Taxon" : "Saccharomyces cerevisiae",
+        "alias" : [ "RP23", "RPL16B", "S000005013", "ribosomal protein L16B (L21B) (rp23) (YL15)" ],
+        "shared_name" : "YNL069C",
+        "SUID" : 726,
+        "degree_layout" : 1,
+        "name" : "YNL069C"
+      },
+      "position" : {
+        "x" : 627.3147710164387,
+        "y" : -205.99251969655353
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "658",
+        "selected" : false,
+        "annotation_Taxon" : "Saccharomyces cerevisiae",
+        "alias" : [ "RPL11B", "S000003317", "ribosomal protein L11B (L16B) (rp39B) (YL22)" ],
+        "shared_name" : "YGR085C",
+        "SUID" : 658,
+        "degree_layout" : 2,
+        "name" : "YGR085C"
+      },
+      "position" : {
+        "x" : 804.3092778523762,
+        "y" : -245.6235926946004
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "660",
+        "selected" : false,
+        "annotation_Taxon" : "Saccharomyces cerevisiae",
+        "alias" : [ "KAP108", "S000002803", "SXM1" ],
+        "shared_name" : "YDR395W",
+        "SUID" : 660,
+        "degree_layout" : 8,
+        "name" : "YDR395W"
+      },
+      "position" : {
+        "x" : 730.8733342488606,
+        "y" : -157.50702317555744
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "579",
+        "selected" : false,
+        "annotation_Taxon" : "Saccharomyces cerevisiae",
+        "alias" : [ "RPL11A", "S000006306", "ribosomal protein L11A (L16A) (rp39A) (YL22)" ],
+        "shared_name" : "YPR102C",
+        "SUID" : 579,
+        "degree_layout" : 2,
+        "name" : "YPR102C"
+      },
+      "position" : {
+        "x" : 841.1395696004231,
+        "y" : -130.77909119923908
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "578",
+        "selected" : false,
+        "annotation_Taxon" : "Saccharomyces cerevisiae",
+        "alias" : [ "GRC5", "QSR1", "RPL10", "S000004065", "ribosomal protein L10" ],
+        "shared_name" : "YLR075W",
+        "SUID" : 578,
+        "degree_layout" : 2,
+        "name" : "YLR075W"
+      },
+      "position" : {
+        "x" : 910.3755162556965,
+        "y" : -217.0562556584676
+      },
+      "selected" : false
+    } ],
+    "edges" : [ {
+      "data" : {
+        "id" : "659",
+        "source" : "658",
+        "target" : "578",
+        "selected" : false,
+        "interaction" : "pp",
+        "shared_interaction" : "pp",
+        "shared_name" : "YGR085C (pp) YLR075W",
+        "SUID" : 659,
+        "name" : "YGR085C (pp) YLR075W"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "661",
+        "source" : "658",
+        "target" : "660",
+        "selected" : false,
+        "interaction" : "pp",
+        "shared_interaction" : "pp",
+        "shared_name" : "YGR085C (pp) YDR395W",
+        "SUID" : 661,
+        "name" : "YGR085C (pp) YDR395W"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "724",
+        "source" : "660",
+        "target" : "723",
+        "selected" : false,
+        "interaction" : "pp",
+        "shared_interaction" : "pp",
+        "shared_name" : "YDR395W (pp) YDL075W",
+        "SUID" : 724,
+        "name" : "YDR395W (pp) YDL075W"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "733",
+        "source" : "660",
+        "target" : "579",
+        "selected" : false,
+        "interaction" : "pp",
+        "shared_interaction" : "pp",
+        "shared_name" : "YDR395W (pp) YPR102C",
+        "SUID" : 733,
+        "name" : "YDR395W (pp) YPR102C"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "727",
+        "source" : "660",
+        "target" : "726",
+        "selected" : false,
+        "interaction" : "pp",
+        "shared_interaction" : "pp",
+        "shared_name" : "YDR395W (pp) YNL069C",
+        "SUID" : 727,
+        "name" : "YDR395W (pp) YNL069C"
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "580",
+        "source" : "578",
+        "target" : "579",
+        "selected" : false,
+        "interaction" : "pp",
+        "shared_interaction" : "pp",
+        "shared_name" : "YLR075W (pp) YPR102C",
+        "SUID" : 580,
+        "name" : "YLR075W (pp) YPR102C"
+      },
+      "selected" : false
+    } ]
+  }
+}

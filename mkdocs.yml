@@ -1,0 +1,133 @@
+# Website information
+site_name: Cytoscape 用户手册
+site_url: https://cytosacpe.leovan.tech
+site_author: Leo Van | 范叶亮
+site_description: Cytoscape 中文用户手册
+
+# Repository
+repo_name: leovan/cytoscape-manual
+repo_url: https://github.com/leovan/cytoscape-manual
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: 版权所有 &copy; 2001-2021, The Cytoscape Consortium
+
+# Google analytics
+google_analytics:
+  - G-7TZ9SS38QN
+  - auto
+
+# Navigation
+nav:
+  - 主页: index.md
+  - 简介: introduction.md
+  - 启动 Cytoscape: launching-cytoscape.md
+  - 命令行参数: command-line-arguments.md
+  - 快速教程: quick-tour-of-cytoscape.md
+  - 创建网络: creating-networks.md
+  - 嵌套网络: nested-networks.md
+  - 支持的网络文件格式: supported-network-file-formats.md
+  - 节点和边列数据: node-and-edge-column-data.md
+  - 列数据函数和方程: column-data-functions-and-equations.md
+  - 搜索和过滤节点和边: finding-and-filtering-nodes-and-edges.md
+  - 导航和布局: navigation-and-layout.md
+  - 样式: styles.md
+  - 网络注释: annotations.md
+  - 应用管理: app-manager.md
+  - 自动化面板: automation-panel.md
+  - 网页浏览器: web-browser.md
+  - 合并: merge.md
+  - 网络分析器: network-analyzer.md
+  - 首选项: preferences.md
+  - Linkout: linkout.md
+  - 面板: panels.md
+  - 渲染引擎: rendering-engine.md
+  - 数据导出: export-your-data.md
+  - Cytoscape 和 OpenCL: cytoscape-and-opencl.md
+  - Cytoscape.js 和 Cytoscape: cytoscape-js-and-cytoscape.md
+  - 自动化: automation.md
+  - 隐私政策: privacy-policy.md
+  - 基础分析教程: basic-expression-analysis-tutorial.md
+
+# Theme
+theme:
+  name: material
+  custom_dir: theme
+  include_search_page: false
+  search_index_only: true
+  language: zh
+  features:
+    - tabs
+    - navigation.expand
+    - search.suggest
+  palette:
+    scheme: default
+    primary: orange
+    accent: orange
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: images/cytoscape3-icon.png
+  logo: images/cytoscape3-icon.png
+
+# Plugins
+plugins:
+  - search:
+      lang: en
+
+# Extra
+extra:
+  social:
+    - icon: material/home
+      link: https://leovan.me
+      name: 个人主页
+    - icon: material/github
+      link: https://github.com/leovan
+      name: Github
+extra_css:
+  - css/image.css
+  - css/table.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - js/math.js
+
+# Markdown extensions
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: leovan
+      repo: cytoscape-manual-zh
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

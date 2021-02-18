@@ -1,0 +1,6 @@
+Example2       M1
+Example2       M2
+M1             A
+M2             B        pp        C
+Example2       A        pp        B
+Example2       M1       im        M2

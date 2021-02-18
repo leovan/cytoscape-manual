@@ -1,0 +1,8 @@
+Example3       M1       im        M2
+Example3       M3       im        M1
+Example3       M2       im        M3
+Example3       C        pp        M3
+Example3       M2       pp        C
+M1             A
+M2             A        pp        B
+M3             B        pp        C
