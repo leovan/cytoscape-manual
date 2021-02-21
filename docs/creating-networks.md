@@ -80,11 +80,11 @@ Cytoscape 支持通过 `File -> Import -> Network from File...` 从分隔的文�
     ![](images/creating-network/import-network-dialog-details.png)
 
 4. 定义边数据列（可选）。网络表格文件除了网络数据外，还可以具有边数据列。
-  - 启动/禁用数据列：你可以通过在列编辑器中选择 ![](images/creating-network/not-imported.png) 来启动/禁用数据列。
+    - 启动/禁用数据列：你可以通过在列编辑器中选择 ![](images/creating-network/not-imported.png) 来启动/禁用数据列。
 
     ![](images/creating-network/import-network-from-table.png)
 
-  - 更改列名或数据类型：你可以在列编辑器中修改列名称和数据类型。有关更多详细信息，请参见[修改列名类型](#修改列名类型)。
+    - 更改列名或数据类型：你可以在列编辑器中修改列名称和数据类型。有关更多详细信息，请参见[修改列名类型](#修改列名类型)。
 5. 单击 `OK` 按钮。
 
 #### 导入不包含边的节点列表
