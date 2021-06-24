@@ -12,11 +12,6 @@ edit_uri: edit/main/docs/
 # Copyright
 copyright: 版权所有 &copy; 2001-2021, The Cytoscape Consortium
 
-# Google analytics
-google_analytics:
-  - G-7TZ9SS38QN
-  - auto
-
 # Navigation
 nav:
   - 主页: index.md
@@ -52,7 +47,6 @@ nav:
 # Theme
 theme:
   name: material
-  custom_dir: theme
   include_search_page: false
   search_index_only: true
   language: zh
@@ -84,6 +78,9 @@ extra:
     - icon: material/github
       link: https://github.com/leovan
       name: Github
+  analytics:
+    provider: google
+    property: G-7TZ9SS38QN
 extra_css:
   - css/image.css
   - css/table.css
