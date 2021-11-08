@@ -29,7 +29,7 @@ nav:
   - 样式: styles.md
   - 网络注释: annotations.md
   - 应用管理: app-manager.md
-  - 自动化面板: automation-panel.md
+  - 命令面板: command-panel.md
   - 网页浏览器: web-browser.md
   - 合并: merge.md
   - 网络分析器: network-analyzer.md

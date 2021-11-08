@@ -8,15 +8,15 @@ Cytoscape 直观的图形用户界面对于交互式网络数据集成、分析�
 
 R 扩展包为 RCy3，通过 Bioconductor 可以获得，请参见：https://www.bioconductor.org/packages/release/bioc/html/RCy3.html。RCy3 提供了一个不错的界面用于浏览文档和说明文，请参见：http://cytoscape.org/RCy3/index.html。[Cytoscape Youtube 频道](https://www.youtube.com/playlist?list=PLFQS98nmv__wYlu_XoscNb6DKu_vo6_vH)中还提供了一些视频教程。
 
-[py4cytoscape](https://py4cytoscape.readthedocs.io/) 是通过 Cytoscape 的 REST API 进行通信的 Python 扩展包。可以在独立或 Notebook Python 编程环境中提供 250 多种函数。它提供了与 RCy3 几乎相同的功能。
+Python 扩展包为 [py4cytoscape](https://github.com/cytoscape/py4cytoscape)。
 
 ## 命令行
 
-命令行功能使你可以编写一系列 Cytoscape 命令和菜单项脚本，其中命令可以包括用户通过 Cytoscape 对话框提供的参数值。例如，`session open file="C:\myfile.cys"` 从文件载入一个会话文件与 `File -> Open` 菜单功能类似。命令可以解析为 Cytoscape 的核心功能或启用自动化的应用。你可以创建脚本文件，通过 `Tools -> Execute Command File` 或在启动 Cytoscapt 时执行。
+命令行功能使你可以编写一系列 Cytoscape 命令和菜单项脚本，其中命令可以包括用户通过 Cytoscape 对话框提供的参数值。例如，`session open file="C:\myfile.cys"` 从文件载入一个会话文件与 `File -> Open` 菜单功能类似。命令可以解析为 Cytoscape 的核心功能或启用自动化的应用。你可以创建脚本文件，通过 `Tools -> Execute Command File` 或在启动 Cytoscape 时执行。
 
 ![](images/automation/command-panel.png)
 
-`Command` 是内置的 Cytoscape 功能，可以将你的工作流自动化为简单的脚本。你可以在[自动化面板](/automation-panel/)部分中了解有关命令的更多信息。
+`Command` 是内置的 Cytoscape 功能，可以将你的工作流自动化为简单的脚本。你可以在[命令面板](/command-panel/)部分中了解有关命令的更多信息。
 
 ## CyREST 接口层
 
@@ -45,12 +45,12 @@ Available namespaces:
   analyzer
   annotation
   apps
-  bridgedb
   command
   cybrowser
   cychart
   diffusion
   edge
+  filetransfer
   filter
   group
   idmapper

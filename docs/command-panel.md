@@ -1,16 +1,16 @@
-# 自动化面板
+# 命令面板
 
-自动化面板使用 `Commands API` 为 Cytoscape 提供了一个简单的命令行界面。它允许用户在 Cytoscape 中键入命令，并在 `Reply Log` 中查看结果。
+命令面板使用 `Commands API` 为 Cytoscape 提供了一个简单的命令行界面。它允许用户在 Cytoscape 中键入命令，并在 `Reply Log` 中查看结果。
 
-任何注册命令的应用都可以通过自动化面板使用。命令是更通用的 Cytoscape 自动化功能的一部分，该功能包括多种执行 Cytoscape 脚本的方式。
+任何注册命令的应用都可以通过命令面板使用。命令是更通用的 Cytoscape 自动化功能的一部分，该功能包括多种执行 Cytoscape 脚本的方式。
 
-通过 `View -> Show/Hide Automation Panel` 可以打开自动化面板。
+通过 `View -> Show Command Panel` 可以打开命令面板。
 
-![](images/automation-panel/automation-panel.png)
+![](images/command-panel/command-panel.png)
 
-自动化面板可以用于读取和执行脚本文件。脚本文件中的每一行都是发送到应用的命令。通过 `-S` 命令行参数，`Tools -> Run Script File...` 或 `Tools -> Execute Command File` 菜单来执行脚本文件。
+命令面板可以用于读取和执行脚本文件。脚本文件中的每一行都是发送到应用的命令。通过 `-S` 命令行参数，`Tools -> Run Script File...` 或 `Tools -> Execute Command File` 菜单来执行脚本文件。
 
-![](images/automation-panel/run-script-file.png)
+![](images/command-panel/run-script-file.png)
 
 Cytoscape 命令由 3 部分组成：一个命令类或空间，该命名空间中的命令，以及用作参数的 `name=value` 对。例如，要从 `Command Line Dialog` 或命令脚本中导入一个 XGMML 格式文件，可以使用：
 
@@ -20,7 +20,7 @@ network import file filePath="path-to-file"
 
 其中 `network` 是命名空间，`import file` 是命令，并且只有一个参数 `filePath="path-to-file"`。如果有更多参数，可以在同一行中以空格分隔。
 
-命令工具还可以使用 `Commands API` 提供帮助。`help` 自身可以列出所有命令类（或命名空间），`help` 后跟一个命名空间将会列出该名称空间支持的所有命令。键入 `help`，然后输入命名空间和命令（例如：`help layout force-directed`）可以获得特定命令的详细信息。命令工具将 `command` 注册为命名空间并支持带有文件参数的命令 `run`。如下为 `command` 命名空间中 `command run` 命令的帮助：
+命令面板还可以使用 `Commands API` 提供帮助。`help` 自身可以列出所有命令类（或命名空间），`help` 后跟一个命名空间将会列出该名称空间支持的所有命令。键入 `help`，然后输入命名空间和命令（例如：`help layout force-directed`）可以获得特定命令的详细信息。命令面板将 `command` 注册为命名空间并支持带有文件参数的命令 `run`。如下为 `command` 命名空间中 `command run` 命令的帮助：
 
 ```
 help command run

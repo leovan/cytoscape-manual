@@ -14,6 +14,8 @@ CyCL 核心应用程序（已经成为 Cytoscape 发行版的一部分）使你�
 
 在大多数情况下，如果有应该首选 GPU 设备。如果在配置窗口中没有你打算使用的设备或根本没有任何设备，则可能需要安装 OpenCL 驱动程序。对于主要制造商的 GPU，OpenCL 驱动程序通常与图形驱动程序一起安装。如果你已经安装了最新的图形驱动程序，但仍未在列表中看到你的设备，请检查你的 GPU 制造商的网站。要在 CPU 或 Xeon Phi 上使用 OpenCL，你需要从 CPU 制造商的网页上单独下载安装驱动程序。
 
+英特尔 CPU 的驱动程序可以在 https://software.intel.com/en-us/articles/opencl-drivers#latest_CPU_runtime 下载，查找 runtime-only。 AMD 要求您为旧硬件查找每个设备的驱动程序或使用 ROCm：https://github.com/RadeonOpenCompute/ROCm/wiki#What-Is-ROCm。
+
 **警告**，安装 OpenCL 设备驱动程序后，需要重新启动 Cytoscape 才能查看到该设备。
 
 ## OpenCL/GPU 故障排除

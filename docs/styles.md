@@ -68,13 +68,21 @@ Cytoscape 3 包含多种示例样式。以下是应用在 galFiltered.sif 网络
 
 在这个界面中允许你使用 `Current Style` 选项在不同样式之间创建/删除/查看/切换。面板显示给定样式的详细映射信息，同时可以用于编辑这些信息。
 
-- 界面顶部有一个下拉列表（`Current Style`），用于选择预定义的样式。还有一个 `Option` 下拉菜单用于重命名、删除、创建和复制样式，以及用于为所选样式创建图例的选项。
+此界面允许你使用下拉菜单和选项菜单创建/删除/查看和在不同样式之间切换。选择特定样式后，`Style` 面板会显示给定样式的详细信息，也可用于编辑这些详细信息。
+
+![](images/styles/pre-defined-styles.png)
+
+- 界面顶部有一个用于选择预定义样式的下拉菜单。
+- 可用样式列表可使用搜索字段进行搜索。
+- `Show only Applied Styles` 按钮 ![](images/styles/current-style-button.png) 将过滤列表以仅显示应用的样式。
+- 单击 `Edit...` 按钮 ![](images/styles/edit-style-button.png) 可以编辑可用样式列表。这将显示一组用于选择和删除样式的按钮。
+- 还有一个 `Options` 按钮 ![](images/styles/options-button.png)，其中包含重命名、删除、创建和复制样式的选项，以及为所选样式创建图例的选项。
 - 界面主区域由 3 个选项卡组成，分别是 `Node`，`Edge` 和 `Network`。
 - 每个选项卡包含与当前样式相关的属性列表。在列表顶部可以使用 `Properties` 下拉菜单为其添加额外的属性。
 - 列表中的每个属性有 3 列：
     - `Default Value` 显示该属性的默认值。单击任意属性的 `Default Value` 可以更改默认值。
     - `Mapping` 显示该属性当前使用的映射类型。单击任意属性的 `Mapping` 会展开属性条目并显示映射关系编辑界面。有关提供的映射类型的详细信息请参见[这里](#映射如何工作)。
-    - `Bypass` 显示所选节点或边的旁路样式。请注意，必须选择一个或多个节点/边时才能激活 `Bypass`。单击 `Bypass` 可以为选定的节点/边设置旁路样式。
+    - `Bypass` 显示所选节点或边的旁路样式。请注意，必须选择一个或多个节点/边时才能激活 `Bypass`。单击 `Bypass` 可以为选定的节点/边设置旁路样式。节点表样式没有 `Bypass` 选项。
 
 `Default Value` 用做没有为属性定义映射或者特定属性的映射未能涵盖的节点/边的默认值。如果属性定义了 `Mapping`，则根据映射的定义来确定所有或部分节点/边的样式。一组选定节点/边的 `Bypass` 将会覆盖默认值和定义的映射。
 
@@ -130,6 +138,7 @@ Cytoscape 允许控制多种属性，相关汇总如下表：
 | Image/Chart Position *1-9*   | 每个图形（图像、图标或渐变）的位置。该属性（最多 9 个）可以通过 `Properties -> Paint -> Custom Paint n -> Image/Chart Position n` 下拉菜单添加到列表中。 |
 | Fill Color                   | 节点的颜色。该属性可以通过 `Properties -> Paint -> Fill Color` 下拉菜单添加到列表中。 |
 | Label Color                  | 节点标签的颜色。该属性可以通过 `Properties -> Paint -> Label Color` 下拉菜单添加到列表中。 |
+| Label Rotation               | 节点标签的旋转角度，默认为 0。 |
 | Selected Paint               | 节点选中时的颜色。该属性可以通过 `Properties -> Paint -> Selected Color` 下拉菜单添加到列表中。 |
 | Shape                        | 节点的形状。                                                 |
 | Shape (Compound Node)        | 复合节点（包含其他节点的节点）的形状。                       |
@@ -170,8 +179,11 @@ Cytoscape 允许控制多种属性，相关汇总如下表：
 | Tooltip                       | 当鼠标悬停在边上显示的提示文字。                             |
 | Transparency                  | 边透明度。0 表示完全透明，255 表示完全不透明。               |
 | Visible                       | 设置为 false 时隐藏该边，默认情况下值为 true。               |
+| Stacking                      | 确定当一对节点之间存在多条边时如何可视化边。                 |
+| Stacking Density              | 当一对节点之间有多个边时，边之间的间距。                     |
 | Width                         | 边线条宽度。                                                 |
 | Edge color to arrows          | 如果设置为 true，则将 Color (Unselected) 应用于整个边，包括线条和箭头。该属性可以在 `Properties -> Paint -> Color (Unselected) -> Edge color to arrows` 下拉菜单中找到。 |
+| Z Order                       | 重叠边的顺序。具有较低值的边将在具有较高值的边下方。默认值将被忽略。只有在定义映射函数时才会使用该值。 |
 
 | 网络属性             | 描述                                                         |
 | :------------------- | :----------------------------------------------------------- |
@@ -189,6 +201,15 @@ Cytoscape 允许控制多种属性，相关汇总如下表：
 | Width                | 网络视图的宽度。该属性可以在 `Properties -> Size -> Width` 下拉菜单中找到。 |
 | Title                | 网络视图的标题。                                             |
 
+| 表格属性              | 描述                           |
+| --------------------- | ------------------------------ |
+| Cell Background Paint | 表格单元格的背景颜色。         |
+| Cell Font Face        | 表格单元格文本的字体。         |
+| Cell Font Size        | 表格单元格文本的字体大小。     |
+| Cell Image/Sparkline  | 在表格单元格中添加图像或图表。 |
+| Cell Text Paint       | 表格单元格中文本的颜色。       |
+| Cell Tooltip          | 显示在表格单元格文本上的提示。 |
+
 ### 可用的形状和线型
 
 | 形状和线型 | 示例                                       |
@@ -196,6 +217,15 @@ Cytoscape 允许控制多种属性，相关汇总如下表：
 | 节点形状   | ![](images/styles/node-shape-options.png)  |
 | 线型       | ![](images/styles/border-line-options.png) |
 | 箭头形状   | ![](images/styles/arrow-shape-options.png) |
+
+### 边堆叠
+
+当一对节点之间有多个边时，边堆叠属性决定了边的可视化方式。
+
+| 边堆叠                                                 | 示例                                                         |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| Auto Bend<br/>![](images/styles/stacking-autobend.png) | 当选择 `Auto Bend` 后，一对节点之间的第一条边将绘制为直线，然后将后续边绘制为距第一条边渐增距离的曲线。 这将创建扇形样式的可视化。<br/>![](images/styles/stacking-autobend-example.png) |
+| Haystack<br/>![](images/styles/stacking-haystack.png)  | `Haystack` 边被绘制为从源节点到目标节点的直线，从每个节点的中心沿某个角度随机放置。 以这种方式，许多平行的 `Haystack` 边缘形成一个紧密的束，尤其是在半透明时。 这使得 `Haystack` 边成为可视化具有大量平行边的图形的有效方法。 注意：当启用 `Haystack` 边时，边的箭头将不可见。<br/>![](images/styles/stacking-haystack-example.png) |
 
 ### 映射如何工作
 
@@ -266,16 +296,18 @@ Cytoscape 允许控制多种属性，相关汇总如下表：
 |    其他    | Label              |    +     |    +     |    o     |
 |    其他    | Tooltip            |    +     |    +     |    o     |
 |    其他    | Label Font Face    |    -     |    +     |    o     |
+|    其他    | Stacking           |    -     |    +     |    o     |
+|    其他    | Stacking Density   |    +     |    +     |    o     |
 
 #### 文本直通映射
 
-在 Cytoscape 2.8 和更高版本中，直通映射可以识别一些值的文本表示。这意味着，如果有一个名为 `Node Size Values` 的字符串数据列，可以通过设置 `Node Size Values` 为节点大小直通映射的控制列来直接将这些值映射为节点大小。支持如下值类型：
+在 Cytoscape 2.8.0 和更高版本中，直通映射可以识别一些值的文本表示。这意味着，如果有一个名为 `Node Size Values` 的字符串数据列，可以通过设置 `Node Size Values` 为节点大小直通映射的控制列来直接将这些值映射为节点大小。支持如下值类型：
 
-- **颜色**：[所有浏览器支持的标准颜色名称](http://www.w3schools.com/html/html_colornames.asp)或十六进制 RGB 颜色。
+- **颜色**：[所有浏览器支持的标准颜色名称](https://www.w3schools.com/colors/colors_names.asp)或十六进制 RGB 颜色。
 - **数值**：自动映射到指定属性。
 - **图片**：URL 字符串。如果该 URL 有效，并且为实际存在的图像，则 Cytoscape 会自动下载并映射到该节点。
 
-##### 示例
+#### 示例
 
 **颜色直通映射**
 
@@ -387,7 +419,7 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
     ![](images/styles/discrete-mapper.png)
 
-4. 设置映射值：单击 `pd`（蛋白质和 DNA 交互）旁边的空白单元格。在单元格的右侧，单击 `...` 按钮。在弹出的窗口中选择绿色或类似的颜色，更改将会立即应用在网络窗口中。
+4. 设置映射值：单击 `pd`（蛋白质和 DNA 交互）旁边的空白单元格。在单元格的右侧，单击 `...` 按钮。将出现一个弹出窗口，其中包含所有可用的调色板和颜色集合，你可以从任何调色板中选择一种颜色。选择绿色或类似的，更改将立即出现在网络窗口中。
 
     ![](images/styles/edge-color-tutorial-2.png)
 
@@ -403,15 +435,13 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
 1. 查找属性：在 `Style` 面板的 `Node` 选项卡中找到 `File Color` 属性。如果在属性列表中不可见，可以通过 `Properties -> Paint -> Fill Color` 来添加。
 2. 设置节点数据列：单击右侧的箭头图标展开 `Fill Color` 条目。单击 `Column` 并从下单列表中选择 `Degree`。
-3. 设置映射类型：设置映射类型为 `Continuous Mapping`，这会自动创建一个默认映射。
+3. 设置映射类型：在 `Mapping Type` 中选择 `Continuous Mapping`，这会基于 `Degree` 列的数据范围自动创建一个默认映射。
 
     ![](images/styles/default-continous.png)
 
 4. 定义调色板。建议从现有提供的调色板中选择一个，但你也可以自行选择颜色状态并设置任意数量的中间色。如下介绍这两种方法。
 
-    ![](images/styles/virdis-plasma.png)
-
-    - 从调色板中选择一个预定义的调色板。这些是来自科学和制图应用出版物建议的颜色，例如 BrewerColors。单击 `Continuous Mapping Editor` 左上方的 `Current Palette` 按钮从一组调色板中进行选择。下图为用于选择一个完整调色板的 `Set Palette` 对话框。
+    - 从调色板中选择一个预定义的调色板。这些是来自科学和制图应用出版物建议的颜色，例如 [BrewerColors](http://colorbrewer2.org/)。单击 `Continuous Mapping Editor` 左上方的 `Current Palette` 按钮从一组调色板中进行选择。下图为用于选择一个完整调色板的 `Set Palette` 对话框。在本教程中，我们选择 `green shades` 调色板。请注意，任何调色板都可以通过选择反转颜色来反转。
 
         ![](images/styles/set-palette.png)
 
@@ -531,8 +561,6 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
 9. 单击 `Apply` 按钮利用选择的数据列和默认选项创建条形图。
 
-    ![](images/styles/bar-chart-panel-apply.png)
-
     ![](images/styles/bar-charts-network-1.png)
 
 10. 目前网络视图看起来不太好，所以我们需要对样式继续进行一些修改。在下面的示例中，节点的形状设置为矩形，节点的填充颜色设置为白色。
@@ -545,7 +573,7 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
     ![](images/styles/bar-charts-node-4.png)
 
-12. 选择其他图表选项：单击 `Image/Chart 1` 属性的 `Deafult Value` 单元格打开 `Graphics` 对话框，然后选择 `Bar Chart` 编辑器上的 `Options` 选项卡。
+12. 选择其他图表选项：单击 `Image/Chart 1` 属性的 `Deafult Value` 单元格打开 `Graphics` 对话框，然后选择 `Bar Chart` 编辑器上的 `Customize` 选项。
 
     ![](images/styles/bar-chart-panel-5.png)
 
@@ -558,14 +586,14 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
     - 更改坐标轴和柱的线宽和颜色。
     - 增加或减少柱之间的间距（最大为图表宽度的 50%）。
 
-    **注意**，其他图表提供不同的选项。
+    **注意**，其他图表类型提供不同的选项。
 
 13. 选中 `Show Domain Axis` 和 `Show Range Axis` 并应用。此时，节点图表如下所示：
 
     ![](images/styles/bar-charts-node-5.png)
 
 14. 默认的 `Domain Labels` 并不是很有用，我们可以设置更好的标签：
-    - 在节点表格（表格面板）中，创建一个新的字符串列表类型的数据列，命名为 `domain_labels`。
+    - 在节点表格中，创建一个新的字符串列表类型的数据列，命名为 `domain_labels`。
     - 双击新建列中的任意一个单元格，键入 `["Bet. Cent.","Closen. Cent","Clust. Coeff.","Topol. Coeff."]`。
     - 右键单击同一个单元格，然后选择应用于整列。
 
@@ -579,6 +607,18 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
     ![](images/styles/bar-charts-node-7.png)
 
+### 教程 7：为节点表创建样式
+
+本教程的目标是为 `Node Table` 中的列设置样式。`Style` 界面的 `Table` 选项卡为一组表格单元格属性提供默认和映射样式选项，在本教程中，我们将使用 `Cell Background Paint` 和 `Cell Font Face`。`Node Table` 样式没有 `Bypass` 选项。
+
+1. 通过 `View -> Show Starter Panel` 打开 `Yeast Perturbation` 示例文件。
+2. 在 `Style` 面板顶部的 `Table` 选项卡，选择 `Default Node`。
+3. 接下来，在 `Column` 下拉列表中选择要添加样式的数据列，在本例中为 `gal80Rexp` 列。
+4. 在 `Cell Background Paint` 的映射列中选择 `gal80Rexp` 并选择默认的红蓝连续映射。这将为 `Node Table` 中相应列中的单元格的背景着色。
+5. 在 `Cell Font Face` 的默认列中选择 `Arial-BoldMT`。
+
+![](images/styles/node-table-style.png)
+
 ## 进阶主题
 
 ### 离散映射
@@ -589,7 +629,8 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
 #### 自动值生成器
 
-- 映射值生成器：此菜单中的函数用于离散映射的值生成。用户可以选择这些功能来自动设置离散映射的值。
+**映射值生成器**：此菜单中的函数用于离散映射的值生成。用户可以选择这些功能来自动设置离散映射的值。
+
 - Rainbow 和 Rainbow OSC：这些函数尝试为每个数据值分配尽可能多的颜色集。
 
     ![](images/styles/rainbow-mapper.png)
@@ -635,7 +676,7 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
 ![](images/styles/gradient-editor-sample.png)
 
-渐变编辑器是用于创建颜色连续映射的编辑器。要改变每个区域的颜色，需要双击控制器（顶部的小三角形）。仅当编辑器具有两个或多个控制器时，才会创建颜色渐变（如下例所示）。
+渐变编辑器是用于创建颜色连续映射的编辑器。默认调色板取决于用于映射的列中的值范围。要更改调色板，请单击当前调色板按钮并选择一个调色板。对话框还包括仅显示色盲友好和反转颜色的选项，用于反转调色板的颜色。要手动更改颜色，请双击控制器（顶部的小三角形），然后从任何调色板中选择一种颜色。仅当编辑器具有两个或更多控制器时才会创建颜色渐变（请参见下面的示例）。
 
 |       1 个控制器（无渐变）        |            2 个控制器             |
 | :-------------------------------: | :-------------------------------: |

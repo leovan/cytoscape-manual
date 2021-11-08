@@ -10,7 +10,7 @@
 
 ![](images/panels/dock-window.png)
 
-每个面板包含多个选项卡。例如，控制面板至少包含 `Network`，`Style`，`Filter` 和 `Annotation` 选项卡。表格面板包含 `Node Table`，`Edge Table` 和 `Network Table` 选项卡。Analyzer（`Tools -> Analyze Network`）的分析结果显示在结果面板中。已安装的应用可能会添加到其他选项卡中。
+每个面板包含多个选项卡。例如，控制面板至少包含 `Network`，`Style`，`Filter` 和 `Annotation` 选项卡。表格面板包含 `Node Table`，`Edge Table` 和 `Network Table` 选项卡。Network Analyzer（`Tools -> Analyze Network`）的分析结果显示在结果面板中。已安装的应用可能会添加到其他选项卡中。
 
 ## 管理面板
 

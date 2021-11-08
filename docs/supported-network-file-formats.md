@@ -155,7 +155,7 @@ M4             C         pp        D
 
 与 SIF 相比，GML 是许多其他网络可视化软件支持的丰富图形格式语言。GML 文件格式规范可以从如下连接获取：
 
-https://www.fim.uni-passau.de/fileadmin/files/lehrstuhl/brandenburg/projekte/gml/gml-technical-report.pdf
+http://www.graphviewer.nl/misc/gmllanguage/gml-technical-report.pdf
 
 通常无法直接修改 GML 文件的内容。一旦以 SIF 格式构建了网络并进行了布局，就可以将布局保存到 GML 或从 GML 加载。加载 GML 文件时，通过 GML 文件指定属性时将产生一个名为 `Filename.style` 的新样式。
 
@@ -183,7 +183,7 @@ GraphML 是用于图形的一种基于 XML 的全面且易于使用的文本格�
 
 ## 分隔的文本表格和 Excel 工作簿
 
-Cytoscape 原生支持 Microsoft Excel 文件（`.xls` 和 `.xlsx`）和分隔的文本文件。这些文件中的表格包含网络数据和边列。用户可以在文件导入时指定包含源节点、目标节点、交互类型和边列的列。其他网络分析工具，例如 igraph（http://cneurocvs.rmki.kfki.hu/igraph/）具有将图形导出为简单文本文件的功能。Cytoscape 可以读取这些文本文件并据此建立网络。更多详细信息，请参考[创建网络](/creating-networks/#创建网络)部分。
+Cytoscape 原生支持 Microsoft Excel 文件（`.xls` 和 `.xlsx`）和分隔的文本文件。这些文件中的表格包含网络数据和边列。用户可以在文件导入时指定包含源节点、目标节点、交互类型和边列的列。其他网络分析工具，例如 igraph（https://igraph.org/）具有将图形导出为简单文本文件的功能。Cytoscape 可以读取这些文本文件并据此建立网络。更多详细信息，请参考[创建网络](/creating-networks/#创建网络)部分。
 
 ## Cytoscape.js JSON
 

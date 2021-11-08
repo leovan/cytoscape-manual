@@ -20,10 +20,10 @@ Cytoscape 提供 4 种缩放机制：工具栏按钮，菜单选项，键盘快�
 - 缩小
     - 菜单选项：`View -> Zoom Out`
     - 键盘快捷键：++ctrl+minus++（Windows）或 ++command+minus++（macOS）
-- 缩小以显示当前网络的全部
+- 适应内容：调整缩放级别以适应网络到窗口
     - 菜单选项：`View -> Fit Content`
     - 键盘快捷键：++ctrl+0++（Windows）或 ++command+0++（macOS）
-- 缩放选择区域
+- 适应选中：调整缩放级别以缩放任何选定节点
     - 菜单选项：`View -> Fit Selected`
     - 键盘快捷键：++ctrl+9++（Windows）或 ++command+9++（macOS）
 
@@ -172,7 +172,7 @@ Cytoscape 提供 4 种缩放机制：工具栏按钮，菜单选项，键盘快�
 ![](images/navigation-and-layout/bundle-edges.png)
 
 1. 选择 `Layout -> Bundle Edges -> All Nodes and Edges`。
-2. 设置参数。算法细节详见[论文](http://www.win.tue.nl/~dholten/papers/forcebundles_eurovis.pdf)。
+2. 设置参数。算法细节详见[论文](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-8659.2009.01450.x)。
 3. 单击 `OK` 按钮并运行。如果边数量很多，边绑定可能会花费很长时间。
     - 如果花费时间太长，请尝试减小 `Maximum iterations`。
     - 对于大型密集网络，请尝试将 `Maximum iterations` 设置为 500 - 1000。
@@ -257,7 +257,7 @@ yFiles 包含的布局算法有：
 - Orthogonal Edge Router
 - Organic Edge Router
 
-下面为 Cytoscape 中 yFiles 布局的一些示例，更多示例请参见 [yFiles 页面](https://www.yworks.com/products/yfiles-layout-algorithms-for-cytoscape)。
+下面为 Cytoscape 中 yFiles 布局的一些示例，更多示例请参见 [yFiles](https://www.yworks.com/products/yfiles-layout-algorithms-for-cytoscape)。
 
 ### yFiles Organic 布局
 

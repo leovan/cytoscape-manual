@@ -60,15 +60,17 @@
 
 ![](images/export-your-data/table-export-dialog.png)
 
-`Table` 选项用于导出当前 Cytoscape 会话中可用的数据表。这包括可以在 `Table Browser` 中看到的节点、边和网络表格，以及任何未分配的表。当前支持的唯一导出文件格式是 CSV。
+`Table to File...` 选项用于导出当前 Cytoscape 会话中可用的数据表。这包括可以在 `Table Panel` 中看到的节点、边和网络表格，以及任何未分配的表。当前支持的唯一导出文件格式是 CSV。
 
-表的导出对话框只有两个可选选项：要导出的表和文件名（文件类型始终为 CSV）。根据所选的表会给出建议使用的文件名，路径默认为当前工作目录。与导出网络一样，可以使用文本框或 `Browse...` 按钮更改建议的文件名和路径。单击 `OK` 导出所选的表。
+表格的导出对话框只有两个可选选项：要导出的表和文件名（文件类型始终为 CSV）。根据所选的表会给出建议使用的文件名，路径默认为当前工作目录。与导出网络一样，可以使用文本框或 `Browse...` 按钮更改建议的文件名和路径。单击 `OK` 导出所选的表。
+
+表格面板中也提供了 `Export Table to File...` 的快捷按钮 ![](images/export-your-data/export-table.png)。
 
 ### 样式
 
 ![](images/export-your-data/styles-export-dialog.png)
 
-`Styles` 选项用于导出当前 Cytoscape 会话中可用的一种或多种视觉样式。支持的格式包括 Style XML（可以被 Cytoscape 3.x 版本导入）或 Cytoscape.js JSON（可以与 Cytoscape.js 一起使用）。
+`Styles` 选项用于导出当前 Cytoscape 会话中可用的一种或多种样式。支持的格式包括 Style XML（可以被 Cytoscape 3.x 版本导入）或 Cytoscape.js JSON（可以与 Cytoscape.js 一起使用）。
 
 样式导出具有 3 个选项：导出格式、要导出的样式和文件名（根据当前目录和文件类型建议）。同导出网络和表一样，可以使用 `Browse...` 按钮或文本框更改建议的文件名。样式列表是一个多选列表，使用 ++ctrl++ 或 ++command++ 单击来选择多个不连续的样式，使用 ++shift++ 单击来选择一系列连续样式。单击 `OK` 导出所选样式。
 
@@ -113,11 +115,11 @@ Cytoscape 可以从网络视图生成出版物级别质量的图像。通过 `Fi
 
 对于 PDF 格式，可以选择将文本导出为字体，该选项不适用于中文或日语等双字节字符。为了避免导出图像中文本损坏，当发布包含非英语字符的网络时，请取消选中该选项。
 
-### 导出为交互式 Web 应用（3.2.0 新增功能）
+### 导出为交互式 Web 应用
 
 Web 是用于数据共享和协作的绝佳平台，Cytoscape 提供了多种在 Web 上发布网络的方法，每种选择都会在便捷和自定义之间进行权衡。所有解决方案都利用 Cytoscape.js 绘图库，因此不仅可以查看，还可以使用 Cytoscape 风格的网络和属性交互式浏览。
 
-最简单的选择是 CyNetShare，你可以在其中将网络（以及样式）保存在公共文件系统中，然后在浏览器中交互式查看网络。与 Google Maps 一样，你可以生成并发布一个 URL，该 URL 允许协作者查看你的网络。
+最简单的选择是 [CyNetShare](/export-your-data#通过-cynetshare-共享)，你可以在其中将网络（以及样式）保存在公共文件系统中，然后在浏览器中交互式查看网络。与 Google Maps 一样，你可以生成并发布一个 URL，该 URL 允许协作者查看你的网络。
 
 另外，Cytoscape 可以生成一个完整的网站，其中包含一个预加载网络的查看器页面。你可以将其直接加载到自己的 Web 服务器上，从而成为网站的一部分。
 
@@ -151,7 +153,7 @@ CyNetShare 使用方式如下：
 6. 可选的，输入样式 URL。
 7. 单击 `Visualize` 按钮。
 
-[CyNetShare](https://idekerlab.github.io/cy-net-share/) 网页上提供了 CyNetShare 用户指南。
+[CyNetShare](http://idekerlab.github.io/cy-net-share/) 网页上提供了 CyNetShare 用户指南。
 
 注意如果你指定了样式网址，该样式会添加到 CyNetShare 的 `Visual Style` 下拉列表的可选样式列表中，并且你可以通过列表来选择应用样式。CyNetShare 初始的视觉样式名称为 `default`，使用 `Visual Style` 下拉列表可以选择 Cytoscape 生成的 .cyjs 和 .json 文件样式。
 
@@ -186,7 +188,6 @@ CyNetShare 使用方式如下：
 如下为从 Cytoscape 导出文件的示例：
 
 - [Example full export deployed to web server](http://chianti.ucsd.edu/~kono/webapp/cytoscape-export-full/)
-- [Archive file](http://cl.ly/XjMs/cytoscape_full_export.zip)
 
 ![](images/export-your-data/web-export-full-2.png)
 

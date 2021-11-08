@@ -23,7 +23,7 @@ _不同平台的系统要求、限制和配置选项请参考 https://cytoscape.
 
 **Cytoscape 依赖于 Java 11。**
 
-- Cytoscape v3.2 之前的版本运行在 Java 6 上，由于 Oracle 和其他 JVM 供应商已经放弃对 Java 6 的支持，因此 Cytoscape v3.2 及其之后版本也不再支持 Java 6。从 v3.3 版本开始，基于同样原因也放弃了对 Java 7 的支持。Cytoscape v3.8 版本放弃了对 Java 8 的支持。
+- Cytoscape v3.2 之前的版本运行在 Java 6 上，由于 Oracle 和其他 JVM 供应商已经放弃对 Java 6 的支持，因此 Cytoscape v3.2 及其之后版本也不再支持 Java 6。从 v3.3 版本开始，放弃了对 Java 7 的支持。Cytoscape v3.8 版本放弃了对 Java 8 的支持。
 - 我们建议使用一个 64 位的 Java 运行时环境，例如：OpenJDK 11。
 
 更多有关信息，请参考 https://cytoscape.org 网站上的 **Release Notes**。
@@ -33,14 +33,14 @@ _不同平台的系统要求、限制和配置选项请参考 https://cytoscape.
 #### 下载和安装
 
 下载和安装 Cytoscape 有多种方式，可以参考 https://cytoscape.org 网站上的下载页面。
-
+∂
 - 用于 Windows，macOS 和 Linux 平台的安装包（适用于大多数用户）。
 - 从发行版压缩包安装 Cytoscape。
 - 从源代码构建 Cytoscape。可以从 [Git 仓库](https://github.com/cytoscape/cytoscape)中获取最新代码。
 
 #### 安装程序
 
-安装 Cytoscape 最简单和常见的方法是从 Cytoscape 网站上下载[安装包](#下载和安装)。运行安装包将会引导你完成安装目录选择、许可协议、文件关联和隐私设置等过程。
+安装 Cytoscape 最简单和常见的方法是从 Cytoscape 网站上下载[安装包](https://cytoscape.org/download.html)。运行安装包将会引导你完成安装目录选择、许可协议、文件关联和隐私设置等过程。
 
 通过从命令行或脚本使用 `-q` 命令参数（例如：`Cytoscape_3_8_0_windows_64bit.exe -q`）运行安装包可以执行静默安装。为了保证操作成功，你的运行环境必须已经具有足够的权限（例如：Windows 管理员权限）。使用 `-q` 参数，安装包将会自动选择所有默认设置。
 

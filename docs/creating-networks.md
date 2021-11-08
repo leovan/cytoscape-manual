@@ -13,13 +13,13 @@
 
 ### 从本地计算机加载网络
 
-通过 `File -> Import -> Network from File...` 或单击工具栏上的 ![](images/creating-network/import-icon.png) 从本地文件加载网络。在文件选择器对话框中选择正确的文件，然后单击打开。Cytoscape 的 `sampleData` 文件夹中包含一些不同类型的示例网络文件。
+通过 `File -> Import -> Network from File...` 或单击工具栏上的 ![](images/creating-network/import-icon.png) 从本地文件加载网络。在文件选择器对话框中选择正确的文件，然后单击 `Open`。Cytoscape 的 `sampleData` 文件夹中包含一些不同类型的示例网络文件。
 
 选择网络文件后，将弹出另一个对话框。你可以选择为新网络创建新的网络集合，也可以选择将新网络加载到现有的网络集合中。选择后者时，请确保选择正确的映射列，以将新网络映射到现有的网络集合。
 
 ![](images/creating-network/import-network.png)
 
-或者，你可以简单地将网络文件从桌面拖到网络列表（控制面板）中，而不是从菜单选项中选择文件。
+或者，你可以简单地将网络文件从桌面拖到控制面板的网络选项卡中，而不是从菜单选项中选择文件。
 
 也可以使用 `-N` 选项直接从命令行加载 SIF，GML 和 XGMML 格式的网络文件。
 
@@ -29,6 +29,33 @@
 
 ![](images/creating-network/import-network-from-url.png)
 
+对于储存在云存储中的网络文件，默认的 URL 在 Cytoscape 中并不总是有效，需要转换才能使用。以下是一些常见云存储选项的默认 URL 转换示例：
+
+#### Dropbox
+
+- 默认 URL：https://www.dropbox.com/s/077w3i4500dxrsm/galFiltered.sif?dl=0
+- Cytoscape URL：https://dl.dropboxusercontent.com/s/077w3i4500dxrsm/galFiltered.sif
+
+**说明**：将 `www.dropbox.com` 替换为 `dl.dropboxusercontent.com` 并删除 `?dl=0`。
+
+#### Google Drive
+
+对于小于 100K 的文件：
+
+- 默认 URL：https://drive.google.com/file/d/1hHO4ErMx7HMo-_sRV_PfeoM3lnn6ZDLw/view?usp=sharing
+- Cytoscape URL：https://drive.google.com/uc?export=download&id=1hHO4ErMx7HMo-_sRV_PfeoM3lnn6ZDLw
+
+**说明**：将 `file/d/` 替换为 `uc?export=download&id=` 并删除 `/view?usp=sharing`。
+
+你可能会看到一个中间导入窗口，如下节所述，你可能需要在其中更改分隔符并定义源、目标和交互。对于此特定示例，在 `Advanced` 中将 `Delimiter` 更改为 `Space`，取消选择 `Use first line as column names` 并将第一列设置为 `Source`，第三列设置为 `Target`，第二列设置为 `Interaction Type.`。
+
+#### Github
+
+- 默认 URL：https://github.com/bdemchak/cytoscape-jupyter/blob/main/sanity-test/data/galFiltered.sif
+- Cytoscape URL：https://raw.githubusercontent.com/bdemchak/cytoscape-jupyter/main/sanity-test/data/galFiltered.sif
+
+**说明**：将 `github.com` 替换为 `raw.githubusercontent.com` 并删除 `/blob`。
+
 网络导入的另一个问题是由于防火墙的存在可能会影响计算机访问这些文件。Cytoscape 支持使用代理服务器来解决此问题。要配置代理服务器，请选择 `Edit -> Preferences -> Proxy Settings...`，这些将在 [`Preferences`](/cytoscape-preferences/) 中进一步讨论。
 
 ## 从未格式化的表格文件导入网络
@@ -37,7 +64,7 @@ Cytoscape 支持通过 `File -> Import -> Network from File...` 从分隔的文�
 
 ![](images/creating-network/import-network-from-table.png)
 
-### 支持的文件
+### 支持的文件类型
 
 导入功能支持带有分隔符的文本文件和 Microsoft Excel 工作簿。对于具有多个工作表的 Excel 工作簿，可以一次选择一个工作表进行导入。以下是一个表格文件的示例数据：
 
@@ -63,11 +90,11 @@ Cytoscape 支持通过 `File -> Import -> Network from File...` 从分隔的文�
 
 ![](images/creating-network/sample-table-data.png)
 
-这个数据文件是一个制表符分割的文本文件，包含网络（交互）数据、边数据和节点数据。要从该表导入网络和边数据，请选择 `Unique ID A` 作为源节点，`Unique ID B` 作为目标节点，`Interactor types` 作为交互类型。接下来，关闭用于节点数据的列（`Alternative ID A`，`species B` 等）。其他列可以作为边数据导入。
+这个数据文件是一个制表符分割的文本文件，包含网络（交互）数据、边数据和节点数据。要从该表导入网络和边数据，请选择 `Unique ID A` 作为源节点，`Unique ID B` 作为目标节点，`Interactor types` 作为交互类型。接下来，关闭用于节点数据的列（`Alt ID A`，`species B` 等）。其他列可以作为边数据导入。
 
 网络导入功能无法导入节点数据列，只能导入边数据列。要从该表导入节点数据列，请参见[节点和边列数据](/node-and-edge-column-data/)。
 
-[^sample-table-data]: 数据源自 Andrew Garrow，Yeyejide Adeleye 和 Guy Warner 的一个合并的人类交互基因组数据集（Unilever, Safety and Environmental Assurance Center, 12 October 2006）。数据文件位于 http://wiki.cytoscape.org/Data_Sets/。
+[^sample-table-data]: 数据源自 Andrew Garrow，Yeyejide Adeleye 和 Guy Warner 的一个合并的人类交互基因组数据集（Unilever, Safety and Environmental Assurance Center, 12 October 2006）。
 
 ### 基础操作
 
@@ -111,8 +138,8 @@ Cytoscape 支持通过 `File -> Import -> Network from File...` 从分隔的文�
 
 列名和数据类型可以在此处修改。
 
-- 修改列名：输入一个新的列名。
-- 修改列数据类型：支持下列数据类型：
+- **修改列名**：输入一个新的列名。
+- **修改列数据类型**：支持下列数据类型：
     - 字符串
     - 布尔值（True / False）
     - 整型
@@ -146,7 +173,7 @@ Cytoscape 核心开发团队已使用此框架开发了多个 Web 服务客户�
 - 在搜索栏中，从下拉菜单选择 NDEx，然后输入一个或多个搜索词，例如：`BRCA1`。
 - 单击回车开始搜索。
 - `CyNDEx-2 Find Networks` 对话框将会打开并搜索结果。
-- 默认情况下，结果将根据您提供的搜索词按照相关性排序。您可以通过单击列标题来改变排序条件。
+- 默认情况下，结果将根据你提供的搜索词按照相关性排序。你可以通过单击列标题来改变排序条件。
 - 标记结果表格顶部的 `My Networks` 复选框可以显示你拥有的结果（你需要具有 NDEx 账户和与 CyNDEx 浏览器关联的配置文件，有关更多详细信息，请参见[导出选项](/export-your-data/)部分）。
 - 单击 ![](images/creating-network/download.png) 将其导入 Cytoscape 并可视化。完成网络加载后，单击关闭对话框按钮关闭该窗口。
 

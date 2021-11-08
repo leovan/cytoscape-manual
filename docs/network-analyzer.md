@@ -44,10 +44,6 @@
 
 ## 网络分析示例
 
-Computation and Visualization of Topological Parameters and Centrality Measures for Biological Networks
-
-Yassen Assenov[^1], Nadezhda Doncheva[^1], Thomas Lengauer[^1], and Mario Albrecht[^1]
-
-[^1]: Department of Computational Biology and Applied Algorithmics, Max Planck Institute for Informatics, Campus E1.4, 66123 Saarbrücken, Germany
-
 完善的在线文档和 Network Analyzer 教程请参见：http://med.bioinf.mpi-inf.mpg.de/networkanalyzer/。
+
+有关其他信息，请参阅 Yassen Assenov，Nadezhda Doncheva，Thomas Lengauer 和 Mario Albrecht，DOI: [10.1038/nprot.2012.004](https://doi.org/10.1038/nprot.2012.004)。

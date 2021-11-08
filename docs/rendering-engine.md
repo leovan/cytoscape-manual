@@ -16,7 +16,7 @@ Cytoscape 能够显示大型网络（大于 10,000 个节点），同时保持�
 
 ### 强制显示细节
 
-如果要显示网络所有细节而不管 LOD 值为多少，可以通过 `View -> Show Graphics Details`（或在 Windows 和 Linux 上按 ++ctrl+shift+d++，在 macOS 上按 ++command+shift+d++）开启详细模式。此选项将强制显示所有图形详细信息。如果网络很大，开启此选项会降低渲染速度。要隐藏详细信息，可以选择 `View -> Hide Graphics Details`。
+如果要显示网络所有细节而不管 LOD 值为多少，可以通过 `View -> Show Graphics Details`（或在 Windows 和 Linux 上按 ++ctrl+shift+d++，在 macOS 上按 ++command+shift+d++）或单击 `Network View Tools` 中的 `Always Show Graphics Details` 按钮 ![](images/rendering-engine/always-show-graphics-details.png) 开启详细模式。此选项将强制显示所有图形详细信息。如果网络很大，开启此选项会降低渲染速度。要隐藏详细信息，可以反选 `View -> Always Show Graphics Details`。
 
 ### 控制 LOD 的参数
 
@@ -24,7 +24,7 @@ Cytoscape 能够显示大型网络（大于 10,000 个节点），同时保持�
 
 **注意**，阈值变得越大，性能会变得越慢。如果你使用小型网络（几百个节点）则不会有问题，但对于大型网络，这会明显降低速度。各种阈值如下所述。
 
-**注意**，即使在选择高水平细节时，Cytoscape 3.8 也会保证交互可用。即使对于非常大的网络，增加细节级别或强制使用完整的图形细节也是安全的。
+**注意**，即使在选择高水平细节时，Cytoscape 3.9 也会保证交互可用。即使对于非常大的网络，增加细节级别或强制使用完整的图形细节也是安全的。
 
 | 参数                         | 描述                                                         |
 | :--------------------------- | :----------------------------------------------------------- |
@@ -33,5 +33,8 @@ Cytoscape 能够显示大型网络（大于 10,000 个节点），同时保持�
 | RENDER.NODELABELTHRESHOLD    | 如果渲染的节点数等于或超过此数量，将不渲染节点标签。默认值为 200。 |
 | RENDER.EDGEARROWTHRESHOLD    | 如果渲染的边数等于或超过此数量，将不渲染边箭头。默认值为 600。 |
 | RENDER.EDGELABELTHRESHOLD    | 如果渲染的边数等于或超过此数量，将不渲染边标签。默认值为 200。 |
+| RENDER.HIDPI                 | 此属性在网络视图中启用/禁用 HiDPI 模式。设置为 true 时，网络将在 4K 超高清和 Retina 显示器上以原始分辨率呈现。Cytoscape 3.9 新增功能。默认为真。 |
+| RENDER.LABELCACHE            | 此属性启用/禁用渲染器标签缓存，启用后可显着提高渲染速度。Cytoscape 3.9 新增功能。默认为真。 |
+| RENDER.EDGEBUFFERPAN         | 此属性启用/禁用渲染器中的一项功能，该功能在平移网络时移动边缘缓冲区，从而避免在某些情况下平移时必须隐藏边缘。Cytoscape 3.9 新增功能。默认为真。 |
 
 在打印或导出网络为 PostScript 之类格式时，无论当前屏幕上是什么，都始终选择最高级别的详细信息。

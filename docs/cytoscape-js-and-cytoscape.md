@@ -31,7 +31,7 @@
 
 #### Cytoscape.js
 
-- 用于网络可视化的 JavaScript 库，并非完整的 Web 应用或移动应用
+- 用于网络可视化的 [JavaScript 库](http://en.wikipedia.org/wiki/JavaScript)，并非完整的 Web 应用或移动应用
 - 可以在大多数现代网络浏览器上运行，包括平板电脑和智能手机
 - 无需插件即可运行，现代浏览器是唯一要求
 - 需要编写代码来设置你的网络或 Web 应用
@@ -46,7 +46,7 @@
 
 ### 将网络和表格导出到 Cytoscape.js
 
-Cytoscape.js 将网络数据（图）及其数据表存储在同一个对象中。选择 `File -> Export -> Network` 可以将网络和表格数据导出为一个单一的 JSON 文件。
+Cytoscape.js 将网络数据（图）及其数据表存储在同一个对象中。Cytoscape 可以将复杂数据写入 JSON 文件，即网络和数据表都将导出为单个 JSON 文件。你可以选择一个网络，通过 `File -> Export -> Network to File...` 导出，并选择 `Cytoscape.js JSON (*.cyjs)` 作为文件类型。
 
 Cytoscape 仅支持 Cytoscape.js 支持的一种 JSON 格式，即：
 
@@ -85,7 +85,7 @@ Cytoscape 直接从数据表创建 JSON 文件，并尝试从原始表中提取�
 
 Cytoscape 和 Cytoscape.js 共享一个称为样式的概念，这是从数据点到网络属性映射的集合。Cytoscape 可以将样式导出至基于 CSS 的 Cytoscape.js JSON 文件中。
 
-通过 `File -> Export -> Styles`，选择 `Cytoscape.js JSON` 格式，可以将所有样式导出到一个 JSON 文件中。
+通过 `File -> Export -> Styles to Files...`，选择 `Style for cytoscape.js (*.json)` 格式，可以将所有样式导出到一个 JSON 文件中。
 
 ### 局限
 
@@ -106,7 +106,7 @@ Cytoscape 的网络渲染系统专为桌面使用而设计，而基于浏览器�
 
 ### 将 Cytoscape.js 数据导入 Cytoscape
 
-通过 `File -> Import -> Network` 菜单可以从文件和 URL 加载 Cytoscape.js 网络的 JSON 文件。
+通过 `File -> Import -> Network ...` 菜单可以从文件和 URL 加载 Cytoscape.js 网络的 JSON 文件。
 
 ## 利用 Cytoscape.js 构建自己的 Web 应用
 
