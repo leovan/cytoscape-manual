@@ -10,7 +10,7 @@ repo_url: https://github.com/leovan/cytoscape-manual
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: 版权所有 &copy; 2001-2021, The Cytoscape Consortium.<br/>翻译：<a href="https://leovan.me" target="_blank">Leo Van | 范叶亮</a>
+copyright: 版权所有 &copy; 2001-2021, The Cytoscape Consortium.<br/>翻译：<a href="https://leovan.me" target="_blank">Leo Van | 范叶亮</a>，由 <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank">Material for MkDocs</a> 构建
 
 # Navigation
 nav:
@@ -54,10 +54,23 @@ theme:
     - tabs
     - navigation.expand
     - search.suggest
+    - search.highlight
+    - navigation.top
   palette:
-    scheme: default
-    primary: orange
-    accent: orange
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: 明亮
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/white-balance-sunny
+        name: 暗黑
   font:
     text: Roboto
     code: Roboto Mono
@@ -81,10 +94,12 @@ extra:
   analytics:
     provider: google
     property: G-7TZ9SS38QN
+  generator: false
 extra_css:
   - css/image.css
   - css/table.css
 extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - js/math.js
 
@@ -97,6 +112,7 @@ markdown_extensions:
   - footnotes
   - meta
   - md_in_html
+  - tables
   - toc:
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify
