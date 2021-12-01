@@ -63,14 +63,14 @@ theme:
       accent: orange
       toggle:
         icon: material/weather-night
-        name: 明亮
+        name: 暗黑
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: orange
       accent: orange
       toggle:
         icon: material/white-balance-sunny
-        name: 暗黑
+        name: 明亮
   font:
     text: Roboto
     code: Roboto Mono
