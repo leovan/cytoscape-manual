@@ -33,7 +33,7 @@ _不同平台的系统要求、限制和配置选项请参考 https://cytoscape.
 #### 下载和安装
 
 下载和安装 Cytoscape 有多种方式，可以参考 https://cytoscape.org 网站上的下载页面。
-∂
+
 - 用于 Windows，macOS 和 Linux 平台的安装包（适用于大多数用户）。
 - 从发行版压缩包安装 Cytoscape。
 - 从源代码构建 Cytoscape。可以从 [Git 仓库](https://github.com/cytoscape/cytoscape)中获取最新代码。
