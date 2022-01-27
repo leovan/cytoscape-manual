@@ -11,6 +11,6 @@ Latest English Version: https://manual.cytoscape.org/en/stable/
 
 最新中文版本：https://cytoscape.leovan.tech/
 
-版权所有 (c) 2001-2021 The Cytoscape Consortium
+版权所有 (c) 2001-2022 The Cytoscape Consortium
 
 翻译：[Leo Van | 范叶亮](https://leovan.me)
