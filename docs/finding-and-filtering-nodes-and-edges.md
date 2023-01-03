@@ -37,7 +37,7 @@
 | ++ctrl+alt+e++（macOS 系统为 ++command+option+e++）  | 选择相邻边                     |
 | ++ctrl+alt+n++（macOS 系统为 ++command+option+n++）  | 按选定边选择节点               |
 
-`Select -> Mouse Drag Selects` 包括与 [Network View Tools](/quick-tour-of-cytoscape#网络视图工具) 的当前选择模式相同的用于鼠标单击或拖动选择的选择模式选项。
+`Select -> Mouse Drag Selects` 包括与 [Network View Tools](/quick-tour-of-cytoscape/#网络视图工具) 的当前选择模式相同的用于鼠标单击或拖动选择的选择模式选项。
 
 `Select -> Nodes -> From ID List File...` 根据指定文件中找到的节点标示符来选择节点。文件格式为每一行一个节点 ID：
 

@@ -25,7 +25,7 @@
 
 ### 从远程计算机加载网络（URL 导入）
 
-通过 `File -> Import -> Network from URL...` 从远程文件加载网络。在导入网络对话框中，手动或使用 URL 书签插入正确的 URL。通过单击文本字段右侧的箭头来访问带有书签的 URL（有关书签的更多详细信息，请参见 [`Preferences`](/cytoscape-preferences/) 中的 `Bookmark Manager`）。另外，你可以将链接从网页浏览器拖放到 URL 文本框中。指定 URL 后，单击 `OK` 按钮以加载网络。
+通过 `File -> Import -> Network from URL...` 从远程文件加载网络。在导入网络对话框中，手动或使用 URL 书签插入正确的 URL。通过单击文本字段右侧的箭头来访问带有书签的 URL（有关书签的更多详细信息，请参见 [`Preferences`](/preferences/) 中的 `Bookmark Manager`）。另外，你可以将链接从网页浏览器拖放到 URL 文本框中。指定 URL 后，单击 `OK` 按钮以加载网络。
 
 ![](images/creating-network/import-network-from-url.png)
 
@@ -56,7 +56,7 @@
 
 **说明**：将 `github.com` 替换为 `raw.githubusercontent.com` 并删除 `/blob`。
 
-网络导入的另一个问题是由于防火墙的存在可能会影响计算机访问这些文件。Cytoscape 支持使用代理服务器来解决此问题。要配置代理服务器，请选择 `Edit -> Preferences -> Proxy Settings...`，这些将在 [`Preferences`](/cytoscape-preferences/) 中进一步讨论。
+网络导入的另一个问题是由于防火墙的存在可能会影响计算机访问这些文件。Cytoscape 支持使用代理服务器来解决此问题。要配置代理服务器，请选择 `Edit -> Preferences -> Proxy Settings...`，这些将在 [`Preferences`](/preferences/) 中进一步讨论。
 
 ## 从未格式化的表格文件导入网络
 
