@@ -10,13 +10,11 @@
 
 ### Network Data Exchange (NDEx) 公共数据库
 
-`Network to NDEx` 和 `Collection to NDEx` 选项用于在公共 NDEx 服务器上存储网络。你可以使用 NDEx 公共服务器将网路存储在云端，与协作者[共享网络](#导出为-ndex-网络)或将[网络存档](#导出为-ndex-网络)并发布。要存储网络你需要首先创建一个免费的 NDEx 账户，通过访问 [NDEx 公共服务器](http://ndexbio.org/)可以轻松创建账户。
+`Network to NDEx` 选项用于在公共 NDEx 服务器上存储网络。你可以使用 NDEx 公共服务器将网路存储在云端，与协作者[共享网络](#导出为-ndex-网络)或将[网络存档](#导出为-ndex-网络)并发布。要存储网络你需要首先创建一个免费的 NDEx 账户，通过访问 [NDEx 公共服务器](http://ndexbio.org/)可以轻松创建账户。
 
 `Network to NDEx` 选项仅将当前选择的网络保存到你的 NDEx 账户中。这样的网络适合其他应用程序和 Web 服务进行处理。因为它仅包含所选网络中的节点和边，而其它视图以及它们的节点和边均未写入。如果稍后重新导入该网络，则只会加载你保存的单个网络。
 
-`Collection to NDEx` 选项将所有网络保存在包含当前选定网络的集合中。如果稍后重新导入该集合，则将加载整个集合。此选项最接近保存整个 Cytoscape 会话。
-
-当你选择上述一个选项时，将显示 CyNDEx-2 浏览器对话框，使你可以提供各种元数据对网络进行注释并使其在 NDEx 中更容易被搜索到。你可以通过编辑 `Network Name` 属性来设置网络名称。使用 `Update Existing Network` 选项可以覆盖网络的现有副本（如果你具有相关权限）。我们建议你提供尽可能多的元数据，并且始终至少提供 `Version` 和 `Description` 属性。
+当你选择该选项时，将显示 CyNDEx-2 浏览器对话框，使你可以提供各种元数据对网络进行注释并使其在 NDEx 中更容易被搜索到。你可以通过编辑 `Network Name` 属性来设置网络名称。使用 `Update Existing Network` 选项可以覆盖网络的现有副本（如果你具有相关权限）。我们建议你提供尽可能多的元数据，并且始终至少提供 `Version` 和 `Description` 属性。
 
 要导出网络，你必须首先通过填写配置文件表单将 NDEx 账户同 CyNDEx-2 浏览器相关联（如下图中的红色椭圆形）。
 
@@ -135,7 +133,9 @@ Web 是用于数据共享和协作的绝佳平台，Cytoscape 提供了多种在
 
 ![](images/export-your-data/web-export-full-export.png)
 
-**注意**，网络浏览器可以快速地呈现小型网络（例如：1000 个节点），尝试渲染大型网络（例如：5000 个节点）将花费很长时间。
+!!! note "注意"
+
+    网络浏览器可以快速地呈现小型网络（例如：1000 个节点），尝试渲染大型网络（例如：5000 个节点）将花费很长时间。
 
 将样式导出为交互式 Web 应用程序概括为一句话：Web 应用程序基于 Cytoscape.js 绘图库，并渲染 Cytoscape 样式的一个子集。更多有关信息，请参见导出至 Cytoscape.js 部分。
 
@@ -155,9 +155,13 @@ CyNetShare 使用方式如下：
 
 [CyNetShare](http://idekerlab.github.io/cy-net-share/) 网页上提供了 CyNetShare 用户指南。
 
-注意如果你指定了样式网址，该样式会添加到 CyNetShare 的 `Visual Style` 下拉列表的可选样式列表中，并且你可以通过列表来选择应用样式。CyNetShare 初始的视觉样式名称为 `default`，使用 `Visual Style` 下拉列表可以选择 Cytoscape 生成的 .cyjs 和 .json 文件样式。
+!!! note "注意"
 
-注意在公共目录系统中生成 URL 的机制是一个快速发展的问题。直到最近，诸如 Dropbox 等系统仍允许用户创建可直接解析为文件的 URL，直接的 URL 可用于 CyNetShare。在撰写本文时，某些公共目录系统（例如：Dropbox）会生成可共享的 URL，这些 URL 解析为一个允许下载文件的网址，可共享的 URL 与 CyNetShare 不兼容。提供共享 URL 的系统可能会在其高级（或专业）版本中提供直接的 URL。要判断你的公共目录系统生成的是否为直接的 URL，可以将生成文件的 URL 粘贴到浏览器中，如果观测到的是文件本身则是直接 URL，如果是下载页面则是共享的 URL。
+    如果你指定了样式网址，该样式会添加到 CyNetShare 的 `Visual Style` 下拉列表的可选样式列表中，并且你可以通过列表来选择应用样式。CyNetShare 初始的视觉样式名称为 `default`，使用 `Visual Style` 下拉列表可以选择 Cytoscape 生成的 .cyjs 和 .json 文件样式。
+
+!!! note "注意"
+
+    在公共目录系统中生成 URL 的机制是一个快速发展的问题。直到最近，诸如 Dropbox 等系统仍允许用户创建可直接解析为文件的 URL，直接的 URL 可用于 CyNetShare。在撰写本文时，某些公共目录系统（例如：Dropbox）会生成可共享的 URL，这些 URL 解析为一个允许下载文件的网址，可共享的 URL 与 CyNetShare 不兼容。提供共享 URL 的系统可能会在其高级（或专业）版本中提供直接的 URL。要判断你的公共目录系统生成的是否为直接的 URL，可以将生成文件的 URL 粘贴到浏览器中，如果观测到的是文件本身则是直接 URL，如果是下载页面则是共享的 URL。
 
 获取直接 URL 的一种简单方式是将文件存储在由 Web 服务器提供的公共目录中。Web 服务器提供的 URL 可能显示为：`http://myserver.com/~mypublicdir/netstyle.json`。
 
@@ -191,7 +195,9 @@ CyNetShare 使用方式如下：
 
 ![](images/export-your-data/web-export-full-2.png)
 
-注意由于 Cytoscape 使用最新的基于 HTML5 的 Web 技术，因此它不支持较旧或不符合要求的 Web 浏览器，例如：Internet Explorer。我们强烈建议你使用最新版本的现代浏览器，例如：Google Chrome，Mozilla Firefox 或 Apple Safari。
+!!! note "注意"
+
+    由于 Cytoscape 使用最新的基于 HTML5 的 Web 技术，因此它不支持较旧或不符合要求的 Web 浏览器，例如：Internet Explorer。我们强烈建议你使用最新版本的现代浏览器，例如：Google Chrome，Mozilla Firefox 或 Apple Safari。
 
 #### 生成简单的网络视图（适用于 Web 应用开发人员）
 

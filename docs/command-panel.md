@@ -8,9 +8,7 @@
 
 ![](images/command-panel/command-panel.png)
 
-命令面板可以用于读取和执行脚本文件。脚本文件中的每一行都是发送到应用的命令。通过 `-S` 命令行参数，`Tools -> Run Script File...` 或 `Tools -> Execute Command File` 菜单来执行脚本文件。
-
-![](images/command-panel/run-script-file.png)
+命令面板可以用于读取和执行脚本文件。脚本文件中的每一行都是发送到应用的命令。通过 `-S` 命令行参数 或 `Tools -> Execute Command File...` 菜单来执行脚本文件。
 
 Cytoscape 命令由 3 部分组成：一个命令类或空间，该命名空间中的命令，以及用作参数的 `name=value` 对。例如，要从 `Command Line Dialog` 或命令脚本中导入一个 XGMML 格式文件，可以使用：
 

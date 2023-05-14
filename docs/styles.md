@@ -77,12 +77,12 @@ Cytoscape 3 包含多种示例样式。以下是应用在 galFiltered.sif 网络
 - `Show only Applied Styles` 按钮 ![](images/styles/current-style-button.png) 将过滤列表以仅显示应用的样式。
 - 单击 `Edit...` 按钮 ![](images/styles/edit-style-button.png) 可以编辑可用样式列表。这将显示一组用于选择和删除样式的按钮。
 - 还有一个 `Options` 按钮 ![](images/styles/options-button.png)，其中包含重命名、删除、创建和复制样式的选项，以及为所选样式创建图例的选项。
-- 界面主区域由 3 个选项卡组成，分别是 `Node`，`Edge` 和 `Network`。
-- 每个选项卡包含与当前样式相关的属性列表。在列表顶部可以使用 `Properties` 下拉菜单为其添加额外的属性。
+- 界面主区域由 4 个选项卡组成，分别是 `Node`，`Edge` 和 `Network`，以及一个 `Column` 选项卡，用于在 `Table` 面板的 `Node` 和 `Label` 表格中的各列上设置映射。请注意，从 Cytoscape 3.10 开始，`Column` 样式将保存为当前样式的一部分。
+- 每个选项卡包含与当前样式相关的属性列表，默认显示一部分属性。在列表顶部可以使用 `Properties` 下拉菜单为其添加额外的属性，显示所有属性或将当前显示的属性保存为默认值。
 - 列表中的每个属性有 3 列：
     - `Default Value` 显示该属性的默认值。单击任意属性的 `Default Value` 可以更改默认值。
     - `Mapping` 显示该属性当前使用的映射类型。单击任意属性的 `Mapping` 会展开属性条目并显示映射关系编辑界面。有关提供的映射类型的详细信息请参见[这里](#映射如何工作)。
-    - `Bypass` 显示所选节点或边的旁路样式。请注意，必须选择一个或多个节点/边时才能激活 `Bypass`。单击 `Bypass` 可以为选定的节点/边设置旁路样式。节点表样式没有 `Bypass` 选项。
+    - `Bypass` 显示所选节点或边的旁路样式。请注意，必须选择一个或多个节点/边时才能激活 `Bypass`。单击 `Bypass` 可以为选定的节点/边设置旁路样式。`Column` 样式没有 `Bypass` 选项。
 
 `Default Value` 用做没有为属性定义映射或者特定属性的映射未能涵盖的节点/边的默认值。如果属性定义了 `Mapping`，则根据映射的定义来确定所有或部分节点/边的样式。一组选定节点/边的 `Bypass` 将会覆盖默认值和定义的映射。
 
@@ -113,102 +113,112 @@ Cytoscape 发行版包含了几种预定义的样式来帮助大家入门。通�
 
 `sampleData` 目录中的 `sampleStyles.xml` 文件提供了其他示例样式。你可以利用 `File -> Import -> Styles form File...` 导入样式文件。
 
-### 节点、边和网络属性列表
+### 节点、边、网络和列属性列表
 
-Cytoscape 允许控制多种属性，相关汇总如下表：
+Cytoscape 允许控制多种属性，相关汇总如下表。默认情况下，某些属性在列表中可见，其他属性可以从 `Properties` 下拉菜单添加到列表中。
 
-**节点属性**
-
-| 节点属性                     | 描述                                                         |
-| :--------------------------- | :----------------------------------------------------------- |
-| Border Line Type             | 节点边框的线型。                                             |
-| Border Transparency          | 节点边框的透明度。0 表示完全透明，255 表示完全不透明。       |
-| Border Width                 | 节点边框的宽度。                                             |
-| Label                        | 节点标签文本。                                               |
-| Label Font Face              | 节点标签字体。                                               |
-| Label Font Size              | 节点标签字体大小。                                           |
-| Label Position               | 节点标签相对于节点的位置。                                   |
-| Label Transparency           | 节点标签的透明度。0 表示完全透明，255 表示完全不透明。       |
-| Label Width                  | 节点标签最大宽度。如果节点标签超过指定宽度，则 Cytoscape 会自动在空白字符处截断。Cytoscape 不会对文字截断，这意味着如果单个单词超过最大宽度，则该单词显示会超过最大宽度。 |
-| Nested Network Image Visible | 用于指示是否可视化嵌套网络的布尔值（假设指定节点存在嵌套网络）。 |
-| Padding (Compound Node)      | 复合节点（包含其他节点的节点）的内边距。                     |
-| Paint                        | 整个节点的颜色，包括边框、标签和选定的画板。该属性可以通过 `Properties -> Paint -> Paint` 下拉菜单添加到列表中。 |
-| Border Paint                 | 节点边框的颜色。该属性可以通过 `Properties -> Paint -> Border Paint` 下拉菜单添加到列表中。 |
-| Image/Chart *1-9*            | 用户自定义的节点图形（图像、图标或渐变）。该属性（最多 9 个）可以通过 `Properties -> Paint -> Custom Paint n -> Image/Chart n` 下拉菜单添加到列表中。 |
-| Image/Chart Position *1-9*   | 每个图形（图像、图标或渐变）的位置。该属性（最多 9 个）可以通过 `Properties -> Paint -> Custom Paint n -> Image/Chart Position n` 下拉菜单添加到列表中。 |
-| Fill Color                   | 节点的颜色。该属性可以通过 `Properties -> Paint -> Fill Color` 下拉菜单添加到列表中。 |
-| Label Color                  | 节点标签的颜色。该属性可以通过 `Properties -> Paint -> Label Color` 下拉菜单添加到列表中。 |
-| Label Rotation               | 节点标签的旋转角度，默认为 0。 |
-| Selected Paint               | 节点选中时的颜色。该属性可以通过 `Properties -> Paint -> Selected Color` 下拉菜单添加到列表中。 |
-| Shape                        | 节点的形状。                                                 |
-| Shape (Compound Node)        | 复合节点（包含其他节点的节点）的形状。                       |
-| Size                         | 节点的大小。宽度和高度相同。此属性与 Node Height 和 Node Width 互斥。该属性可以通过 `Properties -> Size -> Size` 下拉菜单添加到列表中。 |
-| Image/Chart Size *1-9*       | 相关节点图表的大小。该属性可以通过 `Properties -> Size -> Image/Chart Size n` 下拉菜单添加到列表中。 |
-| Height                       | 节点的高度。高度与宽度无关，与 Node Size 互斥。该属性可以通过 `Properties -> Size -> Height` 下拉菜单添加到列表中。 |
-| Width                        | 节点的宽度。宽度与高度无关，与 Node Size 互斥。该属性可以通过 `Properties -> Size -> Width` 下拉菜单添加到列表中。 |
-| Fit Custom Graphics to node  | 切换图表适配节点大小。该属性可以通过 `Properties -> Size -> Fit Custom Graphics to node` 下拉菜单添加到列表中。 |
-| Lock node width and height   | 切换锁定节点宽度和高度，使用 Size 作为两个属性的值。该属性可以通过 `Properties -> Size -> Lock node width and height` 下拉菜单添加到列表中。 |
-| Tooltip                      | 鼠标悬停在节点上时显示的提示文字。                           |
-| Transparency                 | 节点颜色的不透明度。0 表示完全透明，255 表示完全不透明。     |
-| Visible                      | 设置为 false 时隐藏该节点，默认情况下值为 true。             |
-| X Location                   | 节点的 X 坐标。默认值将被忽略，仅当定义了映射函数时才使用该值。 |
-| Y Location                   | 节点的 Y 坐标。默认值将被忽略，仅当定义了映射函数时才使用该值。 |
-| Z Location                   | 节点的 Z 坐标。默认值将被忽略，仅当定义了映射函数时才使用该值。 |
+| 节点属性                      | 描述                                                         |
+| :---------------------------- | :----------------------------------------------------------- |
+| Border Line Type              | 节点边框的线型。                                             |
+| Border Transparency           | 节点边框的透明度。0 表示完全透明，255 表示完全不透明。       |
+| Border Width                  | 节点边框的宽度。该属性默认不显示。                           |
+| Label                         | 节点标签文本。该属性默认不显示。                             |
+| Label Background Color        | 节点标签背景颜色。仅在使用 `Label Background Shape` 时使用。 |
+| Label Background Shape        | 节点标签背景形状。默认为 None。仅在使用 `Label Background Color` 时使用。 |
+| Label Background Transparency | 节点标签背景透明度。0 表示完全透明，255 表示完全不透明。     |
+| Label Font Face               | 节点标签字体。                                               |
+| Label Font Size               | 节点标签字体大小。该属性默认不显示。                         |
+| Label Position                | 节点标签相对于节点的位置。                                   |
+| Label Transparency            | 节点标签的透明度。0 表示完全透明，255 表示完全不透明。       |
+| Label Width                   | 节点标签最大宽度。如果节点标签超过指定宽度，则 Cytoscape 会自动在空白字符处截断。Cytoscape 不会对文字截断，这意味着如果单个单词超过最大宽度，则该单词显示会超过最大宽度。 |
+| Nested Network Image Visible  | 用于指示是否可视化嵌套网络的布尔值（假设指定节点存在嵌套网络）。 |
+| Padding (Compound Node)       | 复合节点（包含其他节点的节点）的内边距。                     |
+| Paint                         | 整个节点的颜色，包括边框、标签和选定的画板。                 |
+| Border Paint                  | 节点边框的颜色。该属性默认不显示。                           |
+| Image/Chart *1-9*             | 用户自定义的节点图形（图像、图标或渐变）。`Image/Chart 1` 默认显示，其他可以通过 `Properties -> Paint -> Custom Paint n -> Image/Chart n` 下拉菜单添加到列表中。 |
+| Image/Chart Position *1-9*    | 每个图形（图像、图标或渐变）的位置。该属性（最多 9 个）可以通过 `Properties -> Paint -> Custom Paint n -> Image/Chart Position n` 下拉菜单添加到列表中。 |
+| Fill Color                    | 节点的颜色。该属性默认不显示。                               |
+| Label Color                   | 节点标签的颜色。该属性默认不显示。                           |
+| Selected Paint                | 节点选中时的颜色。                                           |
+| Shape                         | 节点的形状。该属性默认不显示。                               |
+| Shape (Compound Node)         | 复合节点（包含其他节点的节点）的形状。                       |
+| Size                          | 节点的大小。宽度和高度相同。此属性与 Node Height 和 Node Width 互斥。该属性默认不显示。 |
+| Image/Chart Size *1-9*        | 相关节点图表的大小。`Image/Chart 1` 默认显示，其他可以通过 `Properties -> Size -> Image/Chart Size n` 下拉菜单添加到列表中。 |
+| Height                        | 节点的高度。高度与宽度无关，与 Node Size 互斥。该属性默认不显示。 |
+| Width                         | 节点的宽度。宽度与高度无关，与 Node Size 互斥。该属性默认不显示。 |
+| Fit Custom Graphics to node   | 切换图表适配节点大小。                                       |
+| Lock node width and height    | 切换锁定节点宽度和高度，使用 Size 作为两个属性的值。         |
+| Tooltip                       | 鼠标悬停在节点上时显示的提示文字。                           |
+| Transparency                  | 节点颜色的不透明度。0 表示完全透明，255 表示完全不透明。     |
+| Visible                       | 设置为 false 时隐藏该节点，默认情况下值为 true。             |
+| X Location                    | 节点的 X 坐标。默认值将被忽略，仅当定义了映射函数时才使用该值。 |
+| Y Location                    | 节点的 Y 坐标。默认值将被忽略，仅当定义了映射函数时才使用该值。 |
+| Z Location                    | 节点的 Z 坐标。默认值将被忽略，仅当定义了映射函数时才使用该值。 |
 
 | 边属性                        | 描述                                                         |
 | :---------------------------- | :----------------------------------------------------------- |
 | Bend                          | 边弯曲。定义如何渲染边。用户可以添加多个控制柄来定义边线条的弯曲。 |
 | Curved                        | 如果 Edge Bend 定义，则边会被渲染为直线或曲线。如果值设置为 true，则边会被渲染为曲线。 |
 | Label                         | 边标签文本。                                                 |
+| Label Autorotate              | 控制每个边标签的 `Label Rotation`。如果值为 true，则边标签将自动旋转，使标签与边对齐。如果值为 false，则边标签将水平放置。 |
+| Label Background Color        | 边标签背景颜色。仅在使用 `Label Background Shape` 时使用。   |
+| Label Background Shape        | 边标签背景形状。默认为 None。仅在使用 `Label Background Color` 时使用。 |
+| Label Background Transparency | 边标签背景透明度。0 表示完全透明，255 表示完全不透明。       |
 | Label Font Face               | 边标签文本的字体。                                           |
 | Label Font Size               | 边标签文本的字体大小。                                       |
+| Label Position                | 边标签相对于节点的位置。                                     |
+| Label Rotation                | 边标签的角度，默认为 0。                                     |
 | Label Transparency            | 边标签颜色的不透明度。0 表示完全透明，255 表示完全不透明。   |
+| Label Width                   | 边标签宽度。                                                 |
 | Line Type                     | 边线条类型（实线，虚线等）。                                 |
-| Paint                         | 选择和非选择状态下整个边（线条和箭头）的颜色。该属性可以通过 `Properties -> Paint -> Paint` 下拉菜单添加到列表中。 |
+| Paint                         | 选择和非选择状态下整个边（线条和箭头）的颜色。               |
 | Color (Selected)              | 选择状态下整个边（线条和箭头）的颜色。该属性可以通过 `Properties -> Paint -> Color (Selected) -> Color (Selected)` 下拉菜单添加到列表中。 |
-| Source Arrow Selected Paint   | 选择状态下边在源节点端箭头的颜色。该属性可以通过 `Properties -> Paint -> Color (Selected) -> Source Arrow Selected Paint` 下拉菜单添加到列表中。 |
-| Stroke Color (Selected)       | 选择状态下边线条的颜色。该属性可以通过 `Properties -> Paint -> Color (Selected) -> Stroke Color (Selected)` 下拉菜单添加到列表中。 |
-| Target Arrow Selected Paint   | 选择状态下边在目标节点端箭头的颜色。该属性可以在 `Properties -> Paint -> Color (Selected) -> Target Arrow Selected Paint` 下拉菜单中找到。 |
 | Color (Unselected)            | 非选择状态下整个边（线条和箭头）的颜色。该属性可以在 `Properties -> Paint -> Color (Unselected) -> Color (Unselected)` 下拉菜单中找到。 |
-| Source Arrow Unselected Paint | 非选择状态下边在源节点端箭头的颜色。该属性可以在`Properties -> Paint -> Color (Unselected) -> Source Arrow Unselected Paint` 下拉菜单中找到。 |
-| Stroke Color (Unselected)     | 非选择状态下边线条的颜色。该属性可以在 `Properties -> Paint -> Color (Unselected) -> Stroke Color (Unselected)` 下拉菜单中找到。 |
-| Target Arrow Unselected Paint | 非选择状态下边在目标节点端箭头的颜色。该属性可以在 `Properties -> Paint -> Color (Unselected) -> Target Arrow Unselected Paint` 下拉菜单中找到。 |
+| Source Arrow Selected Paint   | 选择状态下边在源节点端箭头的颜色。该属性可以通过 `Properties -> Paint -> Color (Selected) -> Source Arrow Selected Paint` 下拉菜单添加到列表中。 |
 | Label Color                   | 边标签颜色。该属性可以在 `Properties -> Paint -> Label Color` 下拉菜单中找到。 |
 | Source Arrow Shape            | 边在源节点端箭头的形状。                                     |
+| Source Arrow Size             | 边在源节点端箭头的大小。                                     |
+| Source Arrow Unselected Paint | 非选择状态下边在源节点端箭头的颜色。该属性可以在`Properties -> Paint -> Color (Unselected) -> Source Arrow Unselected Paint` 下拉菜单中找到。 |
+| Stacking                      | 确定当一对节点之间存在多条边时如何可视化边。                 |
+| Stacking Density              | 当一对节点之间有多个边时，边之间的间距。                     |
+| Stroke Color (Selected)       | 选择状态下边线条的颜色。该属性可以通过 `Properties -> Paint -> Color (Selected) -> Stroke Color (Selected)` 下拉菜单添加到列表中。 |
+| Stroke Color (Unselected)     | 非选择状态下边线条的颜色。该属性可以在 `Properties -> Paint -> Color (Unselected) -> Stroke Color (Unselected)` 下拉菜单中找到。 |
+| Target Arrow Selected Paint   | 选择状态下边在目标节点端箭头的颜色。该属性可以在 `Properties -> Paint -> Color (Selected) -> Target Arrow Selected Paint` 下拉菜单中找到。 |
 | Target Arrow Shape            | 边在目标节点端箭头的形状。                                   |
+| Target Arrow Size             | 边在目标节点端箭头的大小。                                   |
+| Target Arrow Unselected Paint | 非选择状态下边在目标节点端箭头的颜色。该属性可以在 `Properties -> Paint -> Color (Unselected) -> Target Arrow Unselected Paint` 下拉菜单中找到。 |
 | Tooltip                       | 当鼠标悬停在边上显示的提示文字。                             |
 | Transparency                  | 边透明度。0 表示完全透明，255 表示完全不透明。               |
 | Visible                       | 设置为 false 时隐藏该边，默认情况下值为 true。               |
-| Stacking                      | 确定当一对节点之间存在多条边时如何可视化边。                 |
-| Stacking Density              | 当一对节点之间有多个边时，边之间的间距。                     |
 | Width                         | 边线条宽度。                                                 |
-| Edge color to arrows          | 如果设置为 true，则将 Color (Unselected) 应用于整个边，包括线条和箭头。该属性可以在 `Properties -> Paint -> Color (Unselected) -> Edge color to arrows` 下拉菜单中找到。 |
 | Z Order                       | 重叠边的顺序。具有较低值的边将在具有较高值的边下方。默认值将被忽略。只有在定义映射函数时才会使用该值。 |
+| Edge color to arrows          | 如果设置为 true，则将 Color (Unselected) 应用于整个边，包括线条和箭头。该属性可以在 `Properties -> Paint -> Color (Unselected) -> Edge color to arrows` 下拉菜单中找到。 |
 
 | 网络属性             | 描述                                                         |
 | :------------------- | :----------------------------------------------------------- |
+| Annotation Selection | 注释是否可以被选中。如果设置为 false，则无法选中注释。避免直接通过 Style 面板修改此属性。 |
 | Background Paint     | 网络视图的背景色。                                           |
 | Center X Location    | 网络视图中心的 X 坐标。                                      |
 | Center Y Location    | 网络视图中心的 Y 坐标。                                      |
-| Annotation Selection | 注释是否可以被选中。如果设置为 false，则无法选中注释。避免直接通过 Style 面板修改此属性。 |
 | Edge Selection       | 边是否可以被选中。如果设置为 false，则无法选中边。避免直接通过 Style 面板修改此属性。 |
-| Node Selection       | 节点是否可以被选中。如果设置为 false，则无法选中节点。避免直接通过 Style 面板修改此属性。 |
-| Node Label Selection | 节点标签是否可以被选中和手动修改位置。避免直接通过 Style 面板修改此属性。 |
 | Force High Detail    | 网络视图的细节级别策略。如果为 true，则视图元素始终以高细节呈现。如果为 false，Cytoscape 将自动选择何时降低细节级别以提高性能。 |
+| Node Label Selection | 节点标签是否可以被选中和手动修改位置。避免直接通过 Style 面板修改此属性。 |
+| Node Selection       | 节点是否可以被选中。如果设置为 false，则无法选中节点。避免直接通过 Style 面板修改此属性。 |
 | Scale Factor         | 网络视图的缩放级别。                                         |
 | Size                 | 网络视图的大小（宽度和高度）。该属性可以在 `Properties -> Size -> Size` 下拉菜单中找到。 |
+| Background Paint     | 网络视图的背景色。                                           |
 | Height               | 网络视图的高度。该属性可以在 `Properties -> Size -> Height` 下拉菜单中找到。 |
 | Width                | 网络视图的宽度。该属性可以在 `Properties -> Size -> Width` 下拉菜单中找到。 |
 | Title                | 网络视图的标题。                                             |
 
-| 表格属性              | 描述                           |
-| --------------------- | ------------------------------ |
-| Cell Background Paint | 表格单元格的背景颜色。         |
-| Cell Font Face        | 表格单元格文本的字体。         |
-| Cell Font Size        | 表格单元格文本的字体大小。     |
-| Cell Image/Sparkline  | 在表格单元格中添加图像或图表。 |
-| Cell Text Paint       | 表格单元格中文本的颜色。       |
-| Cell Tooltip          | 显示在表格单元格文本上的提示。 |
+| 列属性                | 描述                              |
+| --------------------- | --------------------------------- |
+| Cell Background Paint | 表格/列单元格的背景颜色。         |
+| Cell Font Face        | 表格/列单元格文本的字体。         |
+| Cell Font Size        | 表格/列单元格文本的字体大小。     |
+| Cell Image/Sparkline  | 在表格/列单元格中添加图像或图表。 |
+| Cell Text Paint       | 表格/列单元格中文本的颜色。       |
+| Cell Tooltip          | 显示在表格/列单元格文本上的提示。 |
 
 ### 可用的形状和线型
 
@@ -331,18 +341,19 @@ Cytoscape 允许控制多种属性，相关汇总如下表：
 
 Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他属性一样将 `Image/Chart` 属性映射到节点。Cytoscape 提供了一组可用图像，同时你也可以在 `Image Manager` 中添加、修改和删除图像。
 
-本节使用由 Database Center for Life Science (DBCLS) 创建的 [Taxonomy Icon](http://biosciencedbc.jp/taxonomy_icon/taxonomy_icon.cgi?lng=en)，其根据 Creative Commons License ([CC BY 2.1](http://creativecommons.org/licenses/by/2.1/jp/deed.en)) 进行分发。
-
 ### 管理图像
 
 通过 `View -> Open Image Manager...` 菜单可以打开图像管理器。
 
 ![](images/styles/image-manager.png)
 
-- 你可以通过拖放图像文件和 URL 添加图像。如果想要从 Web 浏览器或本地文件系统中添加图像，可以将其拖放至左侧列表中。注意：从 Web 浏览器拖放图像时，请确保实际拖动的是图像的 URL。在某些情况下图像可能连接到 HTML 页面或脚本，在这种情况下拖放功能将不起作用。
-- 如果要从文件夹添加一个或多个图像，请单击图像管理器窗口底部的 ![](images/styles/image-manager-add.png) 按钮，然后选择要添加的图像。
-- 要从当前会话的图片库中删除图片，需要从列表中选择一个或多个图片，然后单击 ![](images/styles/image-manager-remove.png) 按钮删除所选图片。
-- 通过自定义 `Width` 和 `Height` 值来调整图像的大小。如果选中了 `Aspect Ratio` 复选框，则宽高比将始终保持同步。单击 `Original` 按钮可以将图像调整为原始尺寸。
+- 你可以通过拖放图像文件来添加图像。
+- 单击 `Add Images` 按钮并在 `From File` 或 `From URL` 下添加图像来从本地系统或 Web 端添加图像。
+
+    ![](images/styles/image-manager-add-images-from-url.png)
+
+- 如需从文件夹添加一张或多张图像，请在 `From File` 下添加所有图像。
+- 要从当前绘画的图像库中删除图像，只需要选择一个或多个图像并单击 `Remove Selected Images` 按钮 ![](images/styles/image-manager-remove.png) 即可。
 
 ### 在样式中使用图形
 
@@ -353,7 +364,7 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 通过 `Style` 界面，可以像其他属性一样使用和定义节点图形。共有 9 个 `Image/Chart` 属性。
 
 - Cytoscape 提供 3 种图形（通过 `Graphics` 对话框的选项卡选择）：
-    - 图像：你可以选择任意提供的图像，也可以添加自己的图像（单击 `Open Image Manager...` 按钮添加更多图像）。
+    - 图像：你可以选择任意提供的图像，也可以添加自己的图像（单击 `Add Images...` 按钮添加更多图像）。
     - 图表：可用的图表类型如下：![](images/styles/bar-chart-icon.png) 条形图，![](images/styles/box-chart-icon.png) 箱线图，![](images/styles/heat-map-chart-icon.png) 热力图，![](images/styles/line-chart-icon.png) 折线图，![](images/styles/pie-chart-icon.png) 饼图，![](images/styles/ring-chart-icon.png) 环形图。
     - 渐变：你可以为节点设置线性和径向渐变。
 
@@ -364,13 +375,13 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 - 要添加图形，首先在 `Style` 界面中将一个 `Image/Chart` 属性添加至属性列表中（在 `Node` 选项卡中选择 `Properties -> Paint -> Custom Paint n -> Image/Chart n`）。之后，单击 `Image/Chart` 属性中的 `Default Value` 调出 `Graphics` 对话框。选择一个图像、图表或是渐变，然后单击 `Apply`。默认情况下，图像会自动调整大小并与 `Node Size` 属性保持一致。
 - 单击 `Graphics` 对话框顶部的 `Remove Graphics` 按钮来删除图像、图表或渐变。
 
-![](images/styles/custom-graphics-selector.png)
-
 #### 图形位置
 
 每个 `Image/Chart` 属性都与一个位置相关联。你可以使用具有相同编号的 `Image/Chart Position` 属性的 `Default Value` 列中的可用 UI 来编辑其位置。例如：修改 `Image/Chart Position 2` 来改变 `Image/Chart 2` 的位置。
 
-**注意**，对于图像位置设置线性或径向渐变是无效的，因为他们始终位于节点的中心。
+!!! note "注意"
+
+    对于图像位置设置线性或径向渐变是无效的，因为他们始终位于节点的中心。
 
 #### Z 轴顺序
 
@@ -510,7 +521,7 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
     ![](images/styles/custom-graphics-nodes.png)
 
-11. 通过 `Veiw -> Open Image Manager...` 打开图像管理器。将 ![](images/styles/sample-image.png) 图标拖入列表，它会自动将其添加到图像管理器中。
+11. 通过 `Veiw -> Open Image Manager...` 打开图像管理器。下载 ![](images/styles/sample-image.png) 图标，单后单击 `Add Images` 按钮将其添加到图像管理器，然后选择该图标。
 
     ![](images/styles/tutorial-5-icon.png)
 
@@ -586,7 +597,9 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
     - 更改坐标轴和柱的线宽和颜色。
     - 增加或减少柱之间的间距（最大为图表宽度的 50%）。
 
-    **注意**，其他图表类型提供不同的选项。
+    !!! note "注意"
+
+        其他图表类型提供不同的选项。
 
 13. 选中 `Show Domain Axis` 和 `Show Range Axis` 并应用。此时，节点图表如下所示：
 
@@ -607,12 +620,12 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
     ![](images/styles/bar-charts-node-7.png)
 
-### 教程 7：为节点表创建样式
+### 教程 7：为节点表的列创建样式
 
-本教程的目标是为 `Node Table` 中的列设置样式。`Style` 界面的 `Table` 选项卡为一组表格单元格属性提供默认和映射样式选项，在本教程中，我们将使用 `Cell Background Paint` 和 `Cell Font Face`。`Node Table` 样式没有 `Bypass` 选项。
+本教程的目标是为 `Node Table` 中的列设置样式。`Style` 界面的 `Column` 选项卡为一组表格单元格属性提供默认和映射样式选项，在本教程中，我们将使用 `Cell Background Paint` 和 `Cell Font Face`。`Column` 样式没有 `Bypass` 选项。
 
 1. 通过 `View -> Show Starter Panel` 打开 `Yeast Perturbation` 示例文件。
-2. 在 `Style` 面板顶部的 `Table` 选项卡，选择 `Default Node`。
+2. 在 `Style` 面板顶部的 `Column` 选项卡，单击加号并选择 `Table` 列中的 `Node`。
 3. 接下来，在 `Column` 下拉列表中选择要添加样式的数据列，在本例中为 `gal80Rexp` 列。
 4. 在 `Cell Background Paint` 的映射列中选择 `gal80Rexp` 并选择默认的红蓝连续映射。这将为 `Node Table` 中相应列中的单元格的背景着色。
 5. 在 `Cell Font Face` 的默认列中选择 `Arial-BoldMT`。
@@ -694,11 +707,47 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
 连续-离散编辑器用于数值数据和离散属性（例如：字体，形状或线型）之间映射的创建。双击轨道上的图标编辑特定区域的值。
 
-### 管理样式
+### 增强图形
+
+增强图形提供对一组视觉样式直通映射的支持，以便与自定义节点图形一起使用。这些映射都是如下形式：
+
+```
+type: argument1="val1" argument2="val2"
+```
+
+其中 `type` 是图表或渐变的类型，参数是构建该图表或图形的说明。
+
+要是用增强图形，首先将所需的映射添加到 `Node` 表中的新列，然后使用新列直通映射为 `Custom Paint` 属性创建一个样式。这会将你自定义的图表或图形添加到节点上。
+
+下图显示了使用增强图形向节点添加第二个标签的示例。在这种情况下，将酵母 ORF ID 添加为二级节点标签，并偏移到节点的右上角。有关支持的图形类型的完整列表，请案件[此处](http://www.rbvi.ucsf.edu/cytoscape/utilities3/enhancedcg.shtml)。其映射如下：
+
+```
+label: attribute=name labelsize=10 outline=false background=false color=orange
+```
+
+![](images/styles/enhanced-graphics-label.png)
+
+这种图表类型提供了一种可以将文本标签添加到具有比 Cytoscape 视觉属性提供的简单标签更多显示选项的节点的机制。参数有：
+
+- `color`：指定标签的颜色
+- `attribute`：从中获取标签的属性
+- `background`：是否在标签后面和网络顶部绘制半透明背景
+- `bgcolor`：背景颜色
+- `dropShadow`：在标签后面添加阴影
+- `label`：要绘制的标签
+- `labelfont`：用于标签的字体
+- `labelsize`：用于标签的字体大小
+- `labelstyle`：用于标签的字体样式
+- `outline`：字体轮廓
+- `outlineColor`：字体轮廓的颜色
+
+有关添加增强图形工作流程的更详细说明，请参见[教程](https://cytoscape.org/cytoscape-tutorials/protocols/custom-enhanced-graphics-style/#/)。
+
+## 管理样式
 
 所有 Cytoscape 样式均从默认文件加载，用户无法修改。当用户对属性进行更改时，`session_style.xml` 文件将保存在会话文件中。这意味着，保存会话文件则不会丢失任何属性。在常规操作期间不会保存其他样式文件。
 
-#### 保存样式
+### 保存样式
 
 样式会与创建的会话一起自动保存。退出 Cytoscape 之前，系统会提示你确定退出之前保存会话。也可以将样式保存至与会话文件不同的文件中。通过 `File -> Export -> Styles to File...` 菜单可以将样式保存到文件中，从而与其他用户共享样式。
 
@@ -706,7 +755,7 @@ Cytoscape 允许为节点自定义图形。使用 `Style` 界面可以同其他�
 
 你还可以更改 Cytoscape 以后所有会话的默认样式。通过单击 `Style` 部分中的 `Option` ![](images/styles/options-drop-down.png) 下拉菜单，然后选择 `Make Current Styles Default`。这会将当前样式作为 `default_vizmap.xml` 文件保存到 `CytoscapeConfiguration` 目录（位于 HOME 目录中）。每次启动 Cytoscape 时将加载这些样式。
 
-##### 样式文件格式
+#### 样式文件格式
 
 Cytoscape 的本地样式格式为 Style XML。如果想要与其他 Cytoscape 用户共享样式文件，则需要将其导出为这种格式。
 
@@ -717,6 +766,6 @@ Cytoscape 的本地样式格式为 Style XML。如果想要与其他 Cytoscape �
 - 嵌套网络
 - 网络背景（注意：可以在 Cytoscape.js 中手动设置为标准 CSS）
 
-#### 导入样式
+### 导入样式
 
 通过 `File -> Import -> Styles from File...` 菜单导入现有样式，然后选择一个 `styles.xml`（Cytoscape 3 格式）文件。如果属性存在相同的名称，则导入的属性将补充到现有属性或覆盖现有属性。你还可以使用 `-V` 命令行选项指定样式文件。从命令行加载的属性将覆盖所有默认属性。

@@ -48,9 +48,9 @@ Cytoscape 具有编辑功能，你可以在网络画布中交互地构建和修�
 
 ### 文件
 
-文件菜单包含最基本的文件功能：`File -> Open` 可以打开 Cytoscape 会话文件；`File -> New Network` 用于创建新网络，可以用于编辑空白网络，也可以从一个现有网络创建；`File -> Save` 用于保存会话文件；`File -> Import` 用于导入网络和表格；`File -> Export` 用于导出数据。`File -> Export Network to Image` 可以将网络导出为 JPEG，PDF，PNG，PostScript 或 SVG 格式图片。`File -> Export Network to Web Page` 可以利用 Cytoscape.js 将整个会话或单个网络导出为网页。
+文件菜单包含最基本的文件功能：`File -> Open Session...` 可以打开 Cytoscape 会话文件；`File -> New Network` 用于创建新网络，可以用于编辑空白网络，也可以从一个现有网络创建；`File -> Save Session` 用于保存会话文件；`File -> Import` 用于导入网络和表格；`File -> Export` 用于导出数据。`File -> Export -> Network to Image` 可以将网络导出为 JPEG，PDF，PNG，PostScript 或 SVG 格式图片。`File -> Export -> Network to Web Page` 可以利用 Cytoscape.js 将整个会话或单个网络导出为网页。
 
-`File -> Open Recent` 将会列出最近打开的会话文件，以便快速访问。`File -> Print...` 可以进行打印。
+`File -> Open Recent Session` 将会列出最近打开的会话文件，以便快速访问。`File -> Print...` 可以进行打印。
 
 ![](images/quick-tour-of-cytoscape/file-menu.png)
 
@@ -82,23 +82,25 @@ Cytoscape 具有编辑功能，你可以在网络画布中交互地构建和修�
 
 ### 布局
 
-布局菜单具有用于直观组织网络的一系列功能。菜单顶部的 `Bundle Edges`，`Clear Edge Bends` 和 `Node Layout Tools` 是用于操纵网络可视化的工具。菜单的底部列出了各种布局算法，这些算法可以自动布局网络。
+布局菜单具有用于直观组织网络的一系列功能。菜单顶部的 `Bundle Edges`，`Clear All Edge Bends` 和 `Node Layout Tools` 是用于操纵网络可视化的工具。菜单的底部列出了各种布局算法，这些算法可以自动布局网络。
 
 ![](images/quick-tour-of-cytoscape/layout-menu.png)
 
 ### 应用
 
-应用菜单可以让你访问应用管理器（`Apps -> App Manager`）来管理（安装/更新/删除）你的应用，并且为已安装的应用添加选项。根据加载的应用不同，你看到的应用菜单可能与此处显示的不同。下图显示了未安装应用时的应用菜单。
+应用菜单可以让你访问应用商店（`Apps -> App Store`）来管理（安装/更新/删除）你的应用，并且为已安装的应用添加选项。根据加载的应用不同，你看到的应用菜单可能与此处显示的不同。下图显示了未安装应用时的应用菜单。
 
 ![](images/quick-tour-of-cytoscape/apps-menu.png)
 
-**注意**，在线提供的 Cytoscape 应用及其说明列表请参考：http://apps.cytoscape.org。
+!!! note "注意"
+
+    在线提供的 Cytoscape 应用及其说明列表请参考：<http://apps.cytoscape.org>。
 
 在之前版本的 Cytoscape 中，应用称为插件，两者具有类似功能。
 
 ### 工具
 
-工具菜单包含了 `cyChart`，[`Analyze Network`](/network-analyzer/)，[`Open web page`](/web-browser/)，[`Merge`](/merge/)，[`Execute Command File...`](/command-panel/)，`Job Status Monitor`，`Run Script File...` 和 [`Diffuse`](/finding-and-filtering-nodes-and-edges/#扩散) 等高级功能。
+工具菜单包含了 [`Enrichment Table`](/enrichment-table/)，[`cyChart`](/finding-and-filtering-nodes-and-edges/#cychart)，[`Analyze Network`](/network-analyzer/)，[`Open web page`](/web-browser/)，[`Merge`](/merge/)，[`Execute Command File...`](/command-panel/)，`Job Status Monitor` 和 [`Diffuse`](/finding-and-filtering-nodes-and-edges/#扩散) 等高级功能。
 
 Cytoscape 网页浏览器允许直接在 Cytoscape 中查看任何 HTML 页面。网页浏览器可以在单独的窗口中打开，也可以在结果面板中启动。
 
@@ -162,11 +164,11 @@ Cytoscape 中的某些操作将创建新的网络。如果是从旧网络创建�
 - `Show Network` 将显示当前选择的网络。
 - `Detach View` 将网络视图窗口与 Cytoscape 主窗口分离。
 - `Export to File...` 提供了导出网络或图像的选项。
-- `Always Show Graphics Detail` 将强制渲染图形细节。默认情况下是关闭的。
+- `Always Show Graphics Details` 将强制渲染图形细节。默认情况下是关闭的。
 - `Toggle Node Selection` 允许你关闭/打开节点选择。默认情况下是开启的。
 - `Toggle Edge Selection` 允许你关闭/打开边选择。默认情况下是开启的。
 - `Toggle Annotation Selection` 允许你关闭/打开注释选择。默认情况下是关闭的。
-- `Toggle Node Label Selection` 允许你关闭/打开节点标签选择。默认情况下是关闭的。
+- `Toggle Label Selection` 允许你关闭/打开节点/边标签选择。默认情况下是关闭的。
 - `Hide Navigator` 可以隐藏导航器（鸟瞰视图）。
 
 导航器（鸟瞰视图）显示了网络的概述。它可以用于在大型网络视图中导航。蓝色矩形表示当前在网络查看窗口中显示的网络部分，可以通过鼠标拖动它来查看网络的其他部分。放大将导致矩形变小，反之亦然。

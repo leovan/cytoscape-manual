@@ -155,7 +155,7 @@ M4             C         pp        D
 
 与 SIF 相比，GML 是许多其他网络可视化软件支持的丰富图形格式语言。GML 文件格式规范可以从如下连接获取：
 
-http://www.graphviewer.nl/misc/gmllanguage/gml-technical-report.pdf
+<http://www.graphviewer.nl/misc/gmllanguage/gml-technical-report.pdf>
 
 通常无法直接修改 GML 文件的内容。一旦以 SIF 格式构建了网络并进行了布局，就可以将布局保存到 GML 或从 GML 加载。加载 GML 文件时，通过 GML 文件指定属性时将产生一个名为 `Filename.style` 的新样式。
 

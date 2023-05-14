@@ -1,7 +1,7 @@
 # Website information
 site_name: Cytoscape 中文用户手册
 site_url: https://cytosacpe.leovan.tech
-site_author: Leo Van | 范叶亮
+site_author: 范叶亮 | Leo Van
 site_description: Cytoscape 中文用户手册
 
 # Repository
@@ -10,7 +10,7 @@ repo_url: https://github.com/leovan/cytoscape-manual
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: 翻译：<a href="https://leovan.me" target="_blank">Leo Van | 范叶亮</a>
+copyright: 翻译：<a href="https://leovan.me" target="_blank">范叶亮 | Leo Van</a>
 
 # Navigation
 nav:
@@ -28,11 +28,12 @@ nav:
   - 导航和布局: navigation-and-layout.md
   - 样式: styles.md
   - 网络注释: annotations.md
-  - 应用管理: app-manager.md
+  - 应用商店: app-store.md
   - 命令面板: command-panel.md
   - 网页浏览器: web-browser.md
   - 合并: merge.md
   - 网络分析器: network-analyzer.md
+  - 富集表格: enrichment-table.md
   - 首选项: preferences.md
   - Linkout: linkout.md
   - 面板: panels.md

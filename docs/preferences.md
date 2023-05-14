@@ -36,7 +36,9 @@ Cytoscape 的分组视图设置可以通过 `Edit -> Preferences -> Group Prefer
 
 ![](images/preferences/preferences-groups.png)
 
-请注意，分组选项适用于设置后新建的分组，当前存在的分组不受影响。
+!!! note "注意"
+
+    分组选项适用于设置后新建的分组，当前存在的分组不受影响。
 
 `Group Preferences` 对话框提供 3 个 `Group View Settings` 和所有 `Attribute Aggregation Settings` 的设置。分组视图和分组交互包含如下交互设置：
 

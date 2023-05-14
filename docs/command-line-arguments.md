@@ -18,7 +18,9 @@ usage: cytoscape.{sh|bat} [OPTIONS]
 
 为选项指定的任何文件都可以为一个路径或 URL。例如你可以指定一个文件为网络（假设 `myNet.sif` 存在于当前工作目录中）：`cytoscape.sh -N myNet.sif`。
 
-**注意**，当文件路径中包含空格，请确保在其周围加上引号：`cytoscape.bat -N "C:\Program Files\Cytoscape\sampleData\galFiltered.sif"`。
+!!! note "注意"
+
+    当文件路径中包含空格，请确保在其周围加上引号：`cytoscape.bat -N "C:\Program Files\Cytoscape\sampleData\galFiltered.sif"`。
 
 或者可以指定一个 URL 为网络：`cytoscape.sh -N http://example.com/myNet.sif`。
 

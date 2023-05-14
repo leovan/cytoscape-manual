@@ -17,7 +17,7 @@
 
 选择网络文件后，将弹出另一个对话框。你可以选择为新网络创建新的网络集合，也可以选择将新网络加载到现有的网络集合中。选择后者时，请确保选择正确的映射列，以将新网络映射到现有的网络集合。
 
-![](images/creating-network/import-network.png)
+![](images/creating-network/import-network-from-file.png)
 
 或者，你可以简单地将网络文件从桌面拖到控制面板的网络选项卡中，而不是从菜单选项中选择文件。
 
@@ -158,8 +158,8 @@ Cytoscape 支持从公共数据库导入网络。用户可以通过 `File -> Imp
 
 Web 服务是一种标准的，与平台无关的，用于计算机通过互联网进行交互的机制。如今，很多主要的生物数据库的都是使用 Web 服务 API 发布其数据：
 
-- 生物 Web 服务列表：http://taverna.sourceforge.net/services
-- EBI Web 服务：http://www.ebi.ac.uk/Tools/webservices/
+- 生物 Web 服务列表：<https://incubator.apache.org/projects/taverna.html>
+- EBI Web 服务：<https://www.ebi.ac.uk/Tools/common/tools/help/>
 
 Cytoscape 核心开发团队已使用此框架开发了多个 Web 服务客户端。Cytoscape 支持多种 Web 服务，包括：
 
@@ -181,7 +181,7 @@ Cytoscape 核心开发团队已使用此框架开发了多个 Web 服务客户�
 
 你可以在搜索中通过 UUID 来查找网络，例如：`uuid:50e3dff7-133e-11e6-a039-06603eb7f303`。
 
-与 NDEx 一样，CyNDEx-2 使用标准的 Lucene Syntax 作为网络搜索语法。有关其他信息，请参见[在 NDEx 中搜索网络]()。有关 CyNDEx-2 的更多信息，请参见 [CyNDEx-2 App Store](http://apps.cytoscape.org/apps/cyndex2) 页面。
+与 NDEx 一样，CyNDEx-2 使用标准的 [Lucene Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html) 作为网络搜索语法。有关其他信息，请参见[在 NDEx 中搜索网络]()。有关 CyNDEx-2 的更多信息，请参见 [CyNDEx-2 App Store](http://apps.cytoscape.org/apps/cyndex2) 页面。
 
 最后，也可以通过 Cytoscape 工具栏中的 ![](images/creating-network/ndex-icon.png) 按钮访问 NDEx 导入和导出对话框，单击可以显示两个选项。
 

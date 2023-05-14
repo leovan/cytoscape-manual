@@ -21,3 +21,11 @@
 - 如何合并列：用户可以在表中指定每个单独网络的列，以及合并后网络中对应的列名和数据类型。
 
 ![](images/merge/advanced-network-merge-options.png)
+
+## 合并表格
+
+通过 `Tool -> Merge -> Tables...` 可以合并表格。
+
+![](images/merge/merge-table.png)
+
+节点和边的合并与网络合并的方式类似，可以在网络集内部或网络集之间合并表格。

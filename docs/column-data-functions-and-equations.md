@@ -88,10 +88,11 @@ Cytoscape 提供了一组执行特定任务和计算的函数。函数写成函�
 
 当前支持的函数包括：
 
-#### Cytoscape 特定函数
+#### Cytoscape 特定网络函数
 
 - `Degree`：节点的度
 - `InDegree`：节点的入度
+- `IsDirected`：是否为有向图
 - `OutDegree`：节点的出度
 - `SourceID`：边的源节点 ID
 - `TargetID`：边的目标节点 ID
@@ -103,76 +104,104 @@ Cytoscape 提供了一组执行特定任务和计算的函数。函数写成函�
 - `ASin`：反正弦
 - `ATan2`：$\dfrac{y}{x}$ 的反正切
 - `Average`：平均值
+- `Combin`：组合数
 - `Cos`：余弦
 - `Cosh`：双曲余弦
 - `Count`：计数
 - `Degrees`：弧度转角度
 - `Exp`：$e$ 指数
+- `GeoMean`：几何平均数
+- `HarMean`：调和平均数
 - `Ln`：自然对数
 - `Log`：对数
 - `Max`：最大值
 - `Median`：中位数
 - `Min`：最小值
 - `Mod`：取余
+- `Mode`：众数
+- `NormDist`：正态分布的概率密度函数或累计密度函数
+- `Permut`：排列数
 - `Pi`：$\pi$
+- `Product`：乘积
 - `Radians`：角度转弧度
 - `Round`：四舍五入为整数
+- `Sign`：符号函数
 - `Sin`：正弦
 - `Sinh`：双曲正弦
 - `Sqrt`：平方根
+- `StDev`：样本标准差
+- `Sum`：加和
 - `Tan`：正切
 - `Tanh`：双曲正切
-- `Trunk`：截断
+- `Trunc`：截断
+- `Var`：样本方差
 
 #### 字符串运算函数
 
 - `Concatenate`：字符串拼接
 - `Left`：返回左侧部分
 - `Len`：字符串长度
+- `Listtostring`列表转字符串
 - `Lower`：转小写
 - `Mid`：返回中间部分
 - `Right`：返回右侧部分
+- `Split`：分割字符串
 - `Substitute`：替换文本
 - `Text`：使用 Java 的 `DecimalFormat` 将数值转换为文本
 - `Upper`：转大写
 - `Value`：文本转换为数字
 
+#### 列表运算函数
+
+- `Blist`：返回布尔型列表
+- `Count`：返回列表中数值元素的个数
+- `First`：返回列表的第一个元素
+- `Flist`：返回浮点型列表
+- `Ilist`：返回整型列表
+- `Largest`返回列表中的前 $K$ 个最大值
+- `Last`：返回列表的最后一个元素
+- `Len`：返回字符串长度或列表元素个数
+- `Nth`：返回列表的第 $N$ 个元素
+- `Slist`：返回字符型列表
+
 #### 逻辑运算函数
 
 - `And`：逻辑与
+- `If`：条件操作
 - `Not`：逻辑非
 - `Or`：逻辑或
 
-#### 列表运算函数
+#### 日期时间函数
 
-- `First`：返回列表的第一个元素
-- `Last`：返回列表的最后一个元素
-- `Nth`：返回列表的第 $N$ 个元素
-
-#### 统计运算函数
-
-- `Largest`：返回列表中的前 $K$ 个最大值
-- `GeoMean`：几何平均数
-- `HarMean`：调和平均数
-- `Mode`：模
-- `NormDist`：正态分布的概率密度函数或累计密度函数
-- `Permut`：排列数
-- `StDev`：标准差
-- `Var`：方差
-
-#### 其他运算函数
-
-- `Combin`：组合数
-- `If`：条件操作
-- `ListToString`：列表转字符串
 - `Now`：当前日期时间
 - `Today`：当前日期
 
+#### 其他运算函数
+
+- `Booleantablecell`：返回列中指定 SUID 的值
+- `Doubletablecell`：返回列中指定 SUID 的值
+- `Error`：抛出运行时异常
+- `Integertablecell`：返回列中指定 SUID 的值
+- `Longtablecell`：返回列中指定 SUID 的值
+- `Stringtablecell`：返回列中指定 SUID 的值
+
+### 映射源节点和目标节点
+
+默认情况下，Cytoscape 使用公式将源节点和目标节点的列添加到 `Edge Table` 中。这个映射会在打开网络是自动执行，`shared name` 列用于存储映射。但是，选择使用哪个 `Node Table` 列是可自定义的。
+
+通过 `Apps -> mapSourceAndTarget` 可以更新映射。可以选择多个 `Node Table` 列进行映射，这会导致 `Edge Table` 中存在多组源节点列和目标节点列。
+
+通过 `Edit -> Properties -> Cytoscape Preferences`，在下拉列表中选择 `mapSourceAndTarget`，将 `autoMap` 属性更改为 `FALSE` 可以关闭自动映射。
+
+如下截图显示了使用 `COMMON` 节点列的源节点和目标节点映射。
+
+![](images/column-data-functions-and-equations/map-source-and-target.png)
+
 ## 公式构造器
 
-为了简化公式的构造以及便于发现内置函数，程序在表格面板中提供了一个公式构造器。通过单击 ![](images/column-data-functions-and-equations/fx.png) 按钮打开公式构造器。
+为了简化公式的构造以及便于发现内置函数，程序在 **表格面板** 中提供了一个 **公式构造器**。通过单击 ![](images/column-data-functions-and-equations/fx.png) 按钮打开 **公式构造器**。
 
-这应该会显示公式构造器，如下所示：
+这应该会显示 **公式构造器**，如下所示：
 
 ![](images/column-data-functions-and-equations/formula-builder.png)
 

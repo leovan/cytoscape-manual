@@ -63,7 +63,9 @@ Available namespaces:
   vizmap
 ```
 
-**注意**，命名空间列表将根据你安装的应用有所不同，一些应用会在自己的命名空间中提供命令。
+!!! note "注意"
+
+    命名空间列表将根据你安装的应用有所不同，一些应用会在自己的命名空间中提供命令。
 
 如果你的工作站已经使用了 1234 端口，则可以通过如下两种方式指定其它的 CyREST 端口：
 
@@ -77,7 +79,9 @@ Available namespaces:
 
     你可以通过浏览器浏览 http://localhost:8888/v1/ 来测试新端口。
 
-**注意**，如果你希望在一个工作站上运行多个 Cytoscape 示例，则每个 Cytoscape 实例的 CyREST 端口必须唯一。你必须使用属性或命令行参数来使用不同 CyREST 端口运行每个实例。
+!!! note "注意"
+
+    如果你希望在一个工作站上运行多个 Cytoscape 示例，则每个 Cytoscape 实例的 CyREST 端口必须唯一。你必须使用属性或命令行参数来使用不同 CyREST 端口运行每个实例。
 
 ### 探索 CyREST 命令和函数
 
@@ -87,16 +91,22 @@ Cytoscape 通过 `Help -> Automation` 子菜单提供了可用命令和函数的
 
 ![](images/automation/automation-menu.png)
 
-**注意**，`Automation Examples` 包含了一个说明如何探索 CyREST 命令和函数的教程：https://github.com/cytoscape/cytoscape-automation/wiki/Trying-Automation。
+!!! note "注意"
+
+    `Automation Examples` 包含了一个说明如何探索 CyREST 命令和函数的教程：https://github.com/cytoscape/cytoscape-automation/wiki/Trying-Automation。
 
 `CyREST API` 和 `CyREST Command API` 子菜单将在 Swagger Web 应用中介绍 CyREST。你可以通过阅读和直接调用来探索 CyREST 接入点。一个函数的示例页面如下：
 
 ![](images/automation/swagger.png)
 
-**注意**，该页面包含了描述、输入参数、输出值、结果代码和试用按钮。单击按钮执行函数，并显示实际的 CyREST 调用及其结果。充分利用 Swagger 作为原型制作工具可以大大减少代码编写和调试时间。
+!!! note "注意"
+
+    该页面包含了描述、输入参数、输出值、结果代码和试用按钮。单击按钮执行函数，并显示实际的 CyREST 调用及其结果。充分利用 Swagger 作为原型制作工具可以大大减少代码编写和调试时间。
 
 ![](images/automation/swagger-result.png)
 
 要了解有关 CyREST 的更多信息，请参见 Cytoscape Automation 教程页面：https://github.com/cytoscape/cytoscape-automation/wiki/Trying-Automation。
 
-注意 Swagger 页面在执行时会反射 Cytoscape 中的函数，包括已安装应用贡献的命令和函数。要探索已卸载应用中的 CyREST 函数，你需要先安装它们，再通过 `Help -> Automation` 子菜单来生成 Swagger 页面（或仅重载 Swagger 浏览器页面）。
+!!! note "注意"
+
+    Swagger 页面在执行时会反射 Cytoscape 中的函数，包括已安装应用贡献的命令和函数。要探索已卸载应用中的 CyREST 函数，你需要先安装它们，再通过 `Help -> Automation` 子菜单来生成 Swagger 页面（或仅重载 Swagger 浏览器页面）。

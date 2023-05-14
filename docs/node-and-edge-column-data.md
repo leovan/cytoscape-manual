@@ -165,7 +165,7 @@ Cytoscape 启动后，表格面板位于 Cytoscape 主窗口的右下方。通�
 
 ## 从公共数据库导入数据表
 
-还可以通过 Web 服务，例如：[BioMart](http://www.biomart.org)，从公共数据库导入节点数据。
+还可以通过 Web 服务，例如：[BioMart](https://www.ensembl.org/info/data/biomart/index.html)，从公共数据库导入节点数据。
 
 ### 基础操作
 
