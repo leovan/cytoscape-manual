@@ -55,7 +55,7 @@ node1 yy node2
 node1 xx node1
 ```
 
-Cytoscape 中的每个节点和边都有一个名称列。对于以 SIF 格式定义的网络，节点名称应该是唯一的，因为名称相同的节点将被视为相同的节点。默认情况下，每个节点的名称将是此文件中的名称（除非使用样式将另一个字符串映射显示在节点上）。在[样式](/styles/)部分将对此进行讨论。每个边的名称将由源节点和目标节点的名称加上交互类型构成，例如：`sourceName (edgeType) targetName`。
+Cytoscape 中的每个节点和边都有一个名称列。对于以 SIF 格式定义的网络，节点名称应该是唯一的，因为名称相同的节点将被视为相同的节点。默认情况下，每个节点的名称将是此文件中的名称（除非使用样式将另一个字符串映射显示在节点上）。在[样式](styles.md)部分将对此进行讨论。每个边的名称将由源节点和目标节点的名称加上交互类型构成，例如：`sourceName (edgeType) targetName`。
 
 标签 `edgeType` 可以为任何字符串。整个单词或拼接的单词可以用于定义关系类型，例如：`geneFusion`，`cogInference,`，`pullsDown`，`activates`，`degrades`，`inactivates`，`inhibits`，`phosphorylates`，`upRegulates` 等。
 
@@ -183,7 +183,7 @@ GraphML 是用于图形的一种基于 XML 的全面且易于使用的文本格�
 
 ## 分隔的文本表格和 Excel 工作簿
 
-Cytoscape 原生支持 Microsoft Excel 文件（`.xls` 和 `.xlsx`）和分隔的文本文件。这些文件中的表格包含网络数据和边列。用户可以在文件导入时指定包含源节点、目标节点、交互类型和边列的列。其他网络分析工具，例如 igraph（https://igraph.org/）具有将图形导出为简单文本文件的功能。Cytoscape 可以读取这些文本文件并据此建立网络。更多详细信息，请参考[创建网络](/creating-networks/#创建网络)部分。
+Cytoscape 原生支持 Microsoft Excel 文件（`.xls` 和 `.xlsx`）和分隔的文本文件。这些文件中的表格包含网络数据和边列。用户可以在文件导入时指定包含源节点、目标节点、交互类型和边列的列。其他网络分析工具，例如 igraph（https://igraph.org/）具有将图形导出为简单文本文件的功能。Cytoscape 可以读取这些文本文件并据此建立网络。更多详细信息，请参考[创建网络](creating-networks.md#创建网络)部分。
 
 ## Cytoscape.js JSON
 
@@ -382,7 +382,7 @@ Cytoscape 原生支持 Microsoft Excel 文件（`.xls` 和 `.xlsx`）和分隔�
 
 ### 重要提示
 
-Cytoscape 将网络和表格导出到 Cytoscape.js 时会创建一个没有样式的 JSON 文件。这意味着如果你将样式用于网络，需要将样式导出到单独的 JSON 文件中。更多信息请参见[样式](/styles/)部分。
+Cytoscape 将网络和表格导出到 Cytoscape.js 时会创建一个没有样式的 JSON 文件。这意味着如果你将样式用于网络，需要将样式导出到单独的 JSON 文件中。更多信息请参见[样式](styles.md)部分。
 
 ## Cytoscape CX
 

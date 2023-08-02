@@ -49,7 +49,7 @@
 | ++shift++ + 拖选（macOS 系统为 ++command++ + 拖选）            | 通过矩形选择拖动选择节点       |
 | ++ctrl+shift++ + 拖选（macOS 系统为 ++command+shift++ + 拖选） | 通过套索选择拖动选择节点       |
 
-`Select -> Mouse Drag Selects` 包括与 [Network View Tools](/quick-tour-of-cytoscape/#网络视图工具) 的当前选择模式相同的用于鼠标单击或拖动选择的选择模式选项。
+`Select -> Mouse Drag Selects` 包括与 [Network View Tools](quick-tour-of-cytoscape.md#网络视图工具) 的当前选择模式相同的用于鼠标单击或拖动选择的选择模式选项。
 
 `Select -> Nodes -> Largest Subnetwork` 选择当前网络中最大的连通分量。当处理由两个或多个明显连接的图组成的分割网络时，此操作很有用。当选择最大的子网络后，可以轻松地根据选择创建新网络。
 

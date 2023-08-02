@@ -16,7 +16,7 @@ Python 扩展包为 [py4cytoscape](https://github.com/cytoscape/py4cytoscape)。
 
 ![](images/automation/command-panel.png)
 
-`Command` 是内置的 Cytoscape 功能，可以将你的工作流自动化为简单的脚本。你可以在[命令面板](/command-panel/)部分中了解有关命令的更多信息。
+`Command` 是内置的 Cytoscape 功能，可以将你的工作流自动化为简单的脚本。你可以在[命令面板](command-panel.md)部分中了解有关命令的更多信息。
 
 ## CyREST 接口层
 

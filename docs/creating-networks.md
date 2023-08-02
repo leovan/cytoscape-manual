@@ -9,7 +9,7 @@
 
 ## 导入固定格式的网络文件
 
-网络文件可以为[支持的网络格式](/supported-network-file-formats/)部分中描述的任意格式文件。通过 `File -> Import` 将其导入到 Cytoscape 中。网络文件可以位于本地计算机上，也可以位于远程计算机上（在这种情况下需要引用 URL）。
+网络文件可以为[支持的网络格式](supported-network-file-formats.md)部分中描述的任意格式文件。通过 `File -> Import` 将其导入到 Cytoscape 中。网络文件可以位于本地计算机上，也可以位于远程计算机上（在这种情况下需要引用 URL）。
 
 ### 从本地计算机加载网络
 
@@ -19,13 +19,15 @@
 
 ![](images/creating-network/import-network-from-file.png)
 
+Cytoscape 中的网络集合用于组织相关网络，例如：子网络。集合中的网络通过 `shared name` 节点属性链接。`shared name` 属性将在导入时添加。这个属性在你希望修改集合中所有网络的节点名称时很有用。
+
 或者，你可以简单地将网络文件从桌面拖到控制面板的网络选项卡中，而不是从菜单选项中选择文件。
 
 也可以使用 `-N` 选项直接从命令行加载 SIF，GML 和 XGMML 格式的网络文件。
 
 ### 从远程计算机加载网络（URL 导入）
 
-通过 `File -> Import -> Network from URL...` 从远程文件加载网络。在导入网络对话框中，手动或使用 URL 书签插入正确的 URL。通过单击文本字段右侧的箭头来访问带有书签的 URL（有关书签的更多详细信息，请参见 [`Preferences`](/preferences/) 中的 `Bookmark Manager`）。另外，你可以将链接从网页浏览器拖放到 URL 文本框中。指定 URL 后，单击 `OK` 按钮以加载网络。
+通过 `File -> Import -> Network from URL...` 从远程文件加载网络。在导入网络对话框中，手动或使用 URL 书签插入正确的 URL。通过单击文本字段右侧的箭头来访问带有书签的 URL（有关书签的更多详细信息，请参见 [`Preferences`](preferences.md) 中的 `Bookmark Manager`）。另外，你可以将链接从网页浏览器拖放到 URL 文本框中。指定 URL 后，单击 `OK` 按钮以加载网络。
 
 ![](images/creating-network/import-network-from-url.png)
 
@@ -56,7 +58,7 @@
 
 **说明**：将 `github.com` 替换为 `raw.githubusercontent.com` 并删除 `/blob`。
 
-网络导入的另一个问题是由于防火墙的存在可能会影响计算机访问这些文件。Cytoscape 支持使用代理服务器来解决此问题。要配置代理服务器，请选择 `Edit -> Preferences -> Proxy Settings...`，这些将在 [`Preferences`](/preferences/) 中进一步讨论。
+网络导入的另一个问题是由于防火墙的存在可能会影响计算机访问这些文件。Cytoscape 支持使用代理服务器来解决此问题。要配置代理服务器，请选择 `Edit -> Preferences -> Proxy Settings...`，这些将在 [`Preferences`](preferences.md) 中进一步讨论。
 
 ## 从未格式化的表格文件导入网络
 
@@ -92,7 +94,7 @@ Cytoscape 支持通过 `File -> Import -> Network from File...` 从分隔的文�
 
 这个数据文件是一个制表符分割的文本文件，包含网络（交互）数据、边数据和节点数据。要从该表导入网络和边数据，请选择 `Unique ID A` 作为源节点，`Unique ID B` 作为目标节点，`Interactor types` 作为交互类型。接下来，关闭用于节点数据的列（`Alt ID A`，`species B` 等）。其他列可以作为边数据导入。
 
-网络导入功能无法导入节点数据列，只能导入边数据列。要从该表导入节点数据列，请参见[节点和边列数据](/node-and-edge-column-data/)。
+网络导入功能无法导入节点数据列，只能导入边数据列。要从该表导入节点数据列，请参见[节点和边列数据](node-and-edge-column-data.md)。
 
 [^sample-table-data]: 数据源自 Andrew Garrow，Yeyejide Adeleye 和 Guy Warner 的一个合并的人类交互基因组数据集（Unilever, Safety and Environmental Assurance Center, 12 October 2006）。
 
@@ -174,7 +176,7 @@ Cytoscape 核心开发团队已使用此框架开发了多个 Web 服务客户�
 - 单击回车开始搜索。
 - `CyNDEx-2 Find Networks` 对话框将会打开并搜索结果。
 - 默认情况下，结果将根据你提供的搜索词按照相关性排序。你可以通过单击列标题来改变排序条件。
-- 标记结果表格顶部的 `My Networks` 复选框可以显示你拥有的结果（你需要具有 NDEx 账户和与 CyNDEx 浏览器关联的配置文件，有关更多详细信息，请参见[导出选项](/export-your-data/)部分）。
+- 标记结果表格顶部的 `My Networks` 复选框可以显示你拥有的结果（你需要具有 NDEx 账户和与 CyNDEx 浏览器关联的配置文件，有关更多详细信息，请参见[导出选项](export-your-data.md)部分）。
 - 单击 ![](images/creating-network/download.png) 将其导入 Cytoscape 并可视化。完成网络加载后，单击关闭对话框按钮关闭该窗口。
 
 ![](images/creating-network/ndex-search-networks.png)
@@ -221,6 +223,6 @@ Cytoscape 核心开发团队已使用此框架开发了多个 Web 服务客户�
 
 ### 添加网络注释
 
-通过右键单击画布上的任意位置并在 `Add` 菜单中选择注释选项为文本、图像或形状添加[注释](/annotations/)。你可以添加自己的图像，可以从形状库中选择图像，也可以添加纯文本或有边框的文本。形状和文本是可以自定义的，并且可以从右键单击的上下文中编辑任意添加的注释。
+通过右键单击画布上的任意位置并在 `Add` 菜单中选择注释选项为文本、图像或形状添加[注释](annotations.md)。你可以添加自己的图像，可以从形状库中选择图像，也可以添加纯文本或有边框的文本。形状和文本是可以自定义的，并且可以从右键单击的上下文中编辑任意添加的注释。
 
 ![](images/creating-network/add-annotations-menu.png)

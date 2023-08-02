@@ -21,10 +21,10 @@ _不同平台的系统要求、限制和配置选项请参考 https://cytoscape.
 
 ### 安装 Java
 
-**Cytoscape 依赖于 Java 11。**
+**Cytoscape 依赖于 Java 17。**
 
-- Cytoscape v3.2 之前的版本运行在 Java 6 上，由于 Oracle 和其他 JVM 供应商已经放弃对 Java 6 的支持，因此 Cytoscape v3.2 及其之后版本也不再支持 Java 6。从 v3.3 版本开始，放弃了对 Java 7 的支持。Cytoscape v3.8 版本放弃了对 Java 8 的支持。
-- 我们建议使用一个 64 位的 Java 运行时环境，例如：OpenJDK 11。
+- 我们建议使用一个 64 位的 Java 运行时环境，例如：OpenJDK 17。
+- Cytoscape v3.2 之前的版本运行在 Java 6 上，由于 Oracle 和其他 JVM 供应商已经放弃对 Java 6 的支持，因此 Cytoscape v3.2 及其之后版本也不再支持 Java 6。Cytoscape v3.3 版本放弃了对 Java 7 的支持。Cytoscape v3.8 版本放弃了对 Java 8 的支持。Cytoscape v3.10 版本放弃了对 Java 11 的支持。
 
 更多有关信息，请参考 https://cytoscape.org 网站上的 **Release Notes**。
 
@@ -87,7 +87,7 @@ _如果你的 Cytoscape 窗口与此不同，可能需要进一步配置。请�
 
 ### 内存消耗
 
-对于大多数普通用户，Cytoscape 会估计并保留适当的内存。错误的估计值可能会导致 Cytoscape 在启动时挂起，或者无法加载你的网络。除非 Cytoscape 无法启动或载入你的网络，否则它可能正确地估计了可用的内存，你可以继续并来到[快速教程](/quick-tour-of-cytoscape/)。如果 Cytoscape 错误估计了内存大小或无法分配到足够内存，则可能是你使用了 32 位的 JRE，通过安装 64 位 JRE 可以获得更好的结果。
+对于大多数普通用户，Cytoscape 会估计并保留适当的内存。错误的估计值可能会导致 Cytoscape 在启动时挂起，或者无法加载你的网络。除非 Cytoscape 无法启动或载入你的网络，否则它可能正确地估计了可用的内存，你可以继续并来到[快速教程](quick-tour-of-cytoscape.md)。如果 Cytoscape 错误估计了内存大小或无法分配到足够内存，则可能是你使用了 32 位的 JRE，通过安装 64 位 JRE 可以获得更好的结果。
 
 Cytoscape 启动时，主界面的右下角会显示当前内存的使用情况。你可以随时单击 ![](images/launching-cytoscape/memory-button.png) 按钮来访问 ![](images/launching-cytoscape/free-unused-memory.png) 选项。大多数用户不需要使用该选项，但对于载入了多个大型网络的用户而言很实用。
 

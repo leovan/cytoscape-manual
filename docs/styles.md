@@ -128,7 +128,7 @@ Cytoscape 允许控制多种属性，相关汇总如下表。默认情况下，�
 | Label Background Transparency | 节点标签背景透明度。0 表示完全透明，255 表示完全不透明。     |
 | Label Font Face               | 节点标签字体。                                               |
 | Label Font Size               | 节点标签字体大小。该属性默认不显示。                         |
-| Label Position                | 节点标签相对于节点的位置。                                   |
+| Label Position                | 节点标签相对于边的位置。                                     |
 | Label Transparency            | 节点标签的透明度。0 表示完全透明，255 表示完全不透明。       |
 | Label Width                   | 节点标签最大宽度。如果节点标签超过指定宽度，则 Cytoscape 会自动在空白字符处截断。Cytoscape 不会对文字截断，这意味着如果单个单词超过最大宽度，则该单词显示会超过最大宽度。 |
 | Nested Network Image Visible  | 用于指示是否可视化嵌套网络的布尔值（假设指定节点存在嵌套网络）。 |

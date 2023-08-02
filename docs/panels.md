@@ -10,7 +10,7 @@
 
 ![](images/panels/dock-window.png)
 
-每个面板包含多个选项卡。例如，控制面板至少包含 `Network`，`Style`，`Filter` 和 `Annotation` 选项卡。表格面板包含 `Node Table`，`Edge Table`、`Network Table` 和 `Enrichment Table` 选项卡。`Node Table` 和 `Edge Table` 包含所有与[节点和边有关的数据](/node-and-edge-column-data/)。`Network Table` 包含网络维度的关联数据，例如 URL 或发布链接。可以通过在 `Network Table` 中添加列来讲相关的网络维度的信息添加到网络中。Network Analyzer（`Tools -> Analyze Network`）的分析结果显示在结果面板中。已安装的应用可能会添加到其他选项卡中。
+每个面板包含多个选项卡。例如，控制面板至少包含 `Network`，`Style`，`Filter` 和 `Annotation` 选项卡。表格面板包含 `Node Table`，`Edge Table`、`Network Table` 和 `Enrichment Table` 选项卡。`Node Table` 和 `Edge Table` 包含所有与[节点和边有关的数据](node-and-edge-column-data.md)。`Network Table` 包含网络维度的关联数据，例如 URL 或发布链接。可以通过在 `Network Table` 中添加列来讲相关的网络维度的信息添加到网络中。Network Analyzer（`Tools -> Analyze Network`）的分析结果显示在结果面板中。已安装的应用可能会添加到其他选项卡中。
 
 ## 管理面板
 
