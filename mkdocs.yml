@@ -48,7 +48,6 @@ nav:
 # Theme
 theme:
   name: material
-  custom_dir: overrides
   include_search_page: false
   search_index_only: true
   language: zh
@@ -99,7 +98,6 @@ extra:
 extra_css:
   - css/image.css
   - css/table.css
-  - css/google-adsense.css
 extra_javascript:
   - js/math.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
