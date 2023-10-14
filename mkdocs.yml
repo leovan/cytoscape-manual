@@ -52,11 +52,10 @@ theme:
   search_index_only: true
   language: zh
   features:
-    - tabs
     - navigation.expand
-    - search.suggest
     - search.highlight
-    - navigation.top
+    - search.suggest
+    - tabs
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
