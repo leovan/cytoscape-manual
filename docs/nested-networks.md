@@ -8,10 +8,7 @@ Cytoscape 可以将嵌套网络与任何节点相关联。嵌套网络可以是�
 
 ## 创建嵌套网络
 
-用户可以通过两种方式创建嵌套网络：
-
-- 通过导入 Nested Network Format (NNF) 格式文件。（请参见：[NNF Network Format]()）
-- 通过手动构建网络并通过右键单击节点上下文菜单为各个节点分配嵌套网络。（请参见：[Nested Network Node Context Menu]()）
+嵌套网络需手动创建，方法是构建网络并通过右键单击节点上下文菜单为各个节点分配嵌套网络。（请参见：[Nested Network Node Context Menu](navigation-and-layout.md#嵌套网络节点上下文菜单)）
 
 ## 嵌套网络可视化
 

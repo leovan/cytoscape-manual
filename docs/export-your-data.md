@@ -45,12 +45,12 @@
 `Network` 选项用于导出网络数据。网络数据包括网络中的节点和边，如果选择的格式支持（例如：XGMML），还可以包括数据属性和可视化信息。网络数据可以导出为多种格式，包括：
 
 - SIF (Simple Interaction Format)
-- NNF (Nested Network Format)
-- XGMML
+- XGMML，包含或不包含样式数据
 - GraphML
 - PSI-MI Level 1 and 2.5
 - Cytoscape.js JSON (can be used with Cytoscape.js, a tool described in future sections)
 - CX JSON (for Cytoscape Cyberinfrastructure network exchange)
+- CX2 JSON
 
 默认格式为 SIF，这是一种简单的制表符分隔的网络格式，仅提供节点名称和边交互。通过对话框中的下拉框可以选择该格式。系统会根据网络名称和所选格式自动建议一个文件名，并将当前工作目录作为文件默认路径。你可以使用文本框或 `Browse...` 按钮更改建议的文件名和路径。单击 `OK` 导出相应选项的文件。
 

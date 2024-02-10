@@ -3,7 +3,6 @@
 Cytoscape 可以读取以下格式的网络文件：
 
 - Simple interaction file (SIF or .sif format)
-- Nested network format (NNF or .nnf format)
 - Graph Markup Language (GML or .gml format)
 - XGMML (extensible graph markup and modelling language).
 - SBML
@@ -85,71 +84,6 @@ mp .................. metabolite-protein interaction
 如果你的网络恰巧不包含任何边，并且节点名称看起来像边的名称，则可能意味着文件包含使解析器迷惑的散乱的制表符。另一方面，如果你的网络中的节点名称是全名的一半，那么你可能需要使用制表符来分隔节点名称和空格。
 
 简单交互格式的网络通常存储在扩展名为 `.sif` 的文件中，Cytoscape 在浏览目录时也会识别此扩展名的文件。
-
-## NNF
-
-NNF 格式是一种非常简单的格式，与 SIF 不同，它允许每个节点可选地分配单个嵌套网络。其中不能指定其他节点列，仅有 2 种可能的格式：
-
-- 网络中包含一个节点：`network node`
-- 网络中包含连接在一起的 2 个节点：`network node1 interaction node2`
-
-如果网络名称（一行中的第一个条目）先前作为节点名称出现（在第 2 列或第 4 列中），则网络将嵌套在具有相同名称的节点中。同样，如果先前已定义为网络的名称（在第 1 列中），后来又显示为节点名称（在第 2 列或第 4 列中），则先前定义的网络将以相同的名称嵌套在节点中。任何时候相同的名称同时作为网络名称和节点名称时，网络都将嵌套在相同名称的节点中。此外，所有行中都有可能包含注释。注释以 `#` 开头，一直到行尾。尾部注释（在数据之后）和全空白行也是允许的。请注意，如果你在 Cytoscape 中加载多个 NNF 文件，他们将被视为合并的长 NNF 文件。如果你需要在名称中插入空格、制表符或反斜杠，必须在前面加上反斜杠对其进行转义。例如一个反斜杠会变成两个反斜杠，一个空格会变成一个反斜杠紧跟一个空格。
-
-### 示例
-
-#### 示例 1
-
-![](images/supported-network-file-formats/nnf-example-1.png)
-
-```nnf
-Example1       C
-Example1       network1
-network1       A        pp        B
-network1       B        pp        A
-Example1       C        pp        B
-```
-
-#### 示例 2
-
-![](images/supported-network-file-formats/nnf-example-2.png)
-
-```nnf
-Example2       M1
-Example2       M2
-M1             A
-M2             B        pp        C
-Example2       A        pp        B
-Example2       M1       im        M2
-```
-
-#### 示例 3
-
-![](images/supported-network-file-formats/nnf-example-3.png)
-
-```nnf
-Example3       M1       im        M2
-Example3       M3       im        M1
-Example3       M2       im        M3
-Example3       C        pp        M3
-Example3       M2       pp        C
-M1             A
-M2             A        pp        B
-M3             B        pp        C
-```
-
-#### 示例 4
-
-![](images/supported-network-file-formats/nnf-example-4.png)
-
-```nnf
-Example4       M4
-M4             D
-M4             M3
-M3             M2        pp        C
-M2             M1        pp        B
-M1             A
-M4             C         pp        D
-```
 
 ## GML 格式
 
