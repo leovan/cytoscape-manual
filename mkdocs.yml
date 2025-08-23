@@ -10,7 +10,7 @@ repo_url: https://github.com/leovan/cytoscape-manual
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: 版权所有 &copy; 2021-2024，<a href="https://leovan.me" target="_blank">范叶亮 | Leo Van</a>
+copyright: 版权所有 &copy; 2021-2025，<a href="https://leovan.me" target="_blank">范叶亮 | Leo Van</a>
 
 # Navigation
 nav:
@@ -63,15 +63,15 @@ theme:
       primary: orange
       accent: orange
       toggle:
-        icon: material/weather-night
-        name: 暗黑
+        icon: material/brightness-7
+        name: 切换至暗黑模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: orange
       accent: orange
       toggle:
-        icon: material/white-balance-sunny
-        name: 明亮
+        icon: material/brightness-4
+        name: 切换至明亮模式
   font:
     text: Roboto
     code: Roboto Mono
@@ -80,8 +80,7 @@ theme:
 
 # Plugins
 plugins:
-  - search:
-      lang: en
+  - search
 
 # Extra
 extra:
