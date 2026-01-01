@@ -28,4 +28,4 @@ jobs:
           zensical build --clean
 
       - name: Deploy
-        run: npx edgeone pages deploy site -n cytoscape-manual -t ${{ secrets.EDGEONE_API_TOKEN }}
+        run: npx edgeone pages deploy site -n cytoscape-manual -t ${{ secrets.EDGEONE_PAGES_API_TOKEN }}
