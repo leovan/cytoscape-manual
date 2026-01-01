@@ -1,6 +1,8 @@
 # VS Code
 .vscode
 
-# MkDocs
-_build
+# Doc
 site
+
+# Others
+.cache
