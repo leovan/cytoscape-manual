@@ -56,6 +56,7 @@ nav = [
   { "Cytoscape 和 OpenCL" = "cytoscape-and-opencl.md" },
   { "Cytoscape.js 和 Cytoscape" = "cytoscape-js-and-cytoscape.md" },
   { "自动化" = "automation.md" },
+  { "智能体集成" = "agentic-integration.md" },
   { "隐私政策" = "privacy-policy.md" },
   { "基础分析教程" = "basic-expression-analysis-tutorial.md" },
 ]
@@ -143,7 +144,7 @@ generic = true
 [project.markdown_extensions.pymdownx.details]
 
 [project.markdown_extensions.pymdownx.emoji]
-emoji_index = "zensical.extensions.emoji.twemoji" 
+emoji_index = "zensical.extensions.emoji.twemoji"
 emoji_generator = "zensical.extensions.emoji.to_svg"
 
 [project.markdown_extensions.pymdownx.highlight]
